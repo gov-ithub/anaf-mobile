@@ -2,7 +2,7 @@ import { Injectable, Inject, OpaqueToken } from '@angular/core';
 import { Jsonp, Http, Response, Headers } from '@angular/http';
 import '../rxjs-operators';
 import { Observable } from 'rxjs/Observable';
-import { RssChannels, RssChannel, RssFeed, RssFeedItem } from '../models/index';
+import { RssChannels, IRssChannels,IRssChannel, RssChannel, RssFeed, RssFeedItem, IRssFeed } from '../models/index';
 import { RSS_CHANNEL_LIST, RSS_CHANNEL_LIST_TOKEN } from '../shared/config';
 
 /**
@@ -38,11 +38,11 @@ export class RssService {
     /**
      * Returns the channel list from configuration file
      * 
-     * @returns {Observable<RssChannels>}
+     * @returns {Observable<IRssChannels>}
      * 
      * @memberOf RssService
      */
-    getChannelList(): Observable<RssChannels> {
+    getChannelList(): Observable<IRssChannels> {
         /**
          * 
          * 
@@ -62,11 +62,11 @@ export class RssService {
      * Returns an instance of RssChannel from configuration file, based on channel tag
      * 
      * @param {string} tag
-     * @returns {Observable<RssChannel>}
+     * @returns {Observable<IRssChannel>}
      * 
      * @memberOf RssService
      */
-    getChannel(tag: string): Observable<RssChannel> {
+    getChannel(tag: string): Observable<IRssChannel> {
         /**
          * Channel tag. See IRssChannel tag
          * 
@@ -100,7 +100,7 @@ export class RssService {
      * 
      * @memberOf RssService
      */
-    getRssFeed(channel: RssChannel): Observable<RssFeed> {
+    getRssFeed(channel: IRssChannel): Observable<IRssFeed> {
         let headers: Headers = new Headers();
 
         headers.append('Accept', 'application/xml');
@@ -124,7 +124,7 @@ export class RssService {
      * 
      * @memberOf RssService
      */
-    private convertToJson(response: Response, channel: RssChannel): RssFeed {
+    private convertToJson(response: Response, channel: IRssChannel): IRssFeed {
 
         let body = (<any>response)._body;
         let jsonBody = JSON.parse(xmljs.xml2json(body, { compact: true, ignoreDeclaration: true, ignoreComment: true }));
