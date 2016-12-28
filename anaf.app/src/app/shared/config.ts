@@ -10,7 +10,11 @@ export const RSS_CHANNEL_LIST: IRssChannels={
         tag:"BUC_ACH_BUN",
         title: "Bucuresti - RSS - Anunturi de achizitie bunuri si servicii",
         description:"Bucuresti - RSS",
-        link:"https://www.anaf.ro/BucurestiRSS/?canal=achizBS"
+        link:"https://www.anaf.ro/BucurestiRSS/?canal=achizBS",
+        channelGroup:{
+            name: "ACHIZITII",
+            description: "Achizitie de bunuri si servicii"
+        }
     }]
 }
 

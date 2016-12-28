@@ -1,3 +1,5 @@
+import {IRssChannelGroup} from './rss-channel-group.model';
+
 /**
  * Interface for RssChannel
  * 
@@ -33,6 +35,14 @@ export interface IRssChannel {
      * @memberOf IRssChannel
      */
     link: string;
+    /**
+     * Channel group
+     * 
+     * @type {IRssChannelGroup}
+     * @memberOf IRssChannel
+     */
+
+    channelGroup: IRssChannelGroup
 }
 
 
@@ -72,4 +82,11 @@ export class RssChannel implements IRssChannel {
      * @memberOf RssChannel
      */
     public link: string;
+    /**
+     * See RssChannel channelGroup
+     * 
+     * @type {IRssChannelGroup}
+     * @memberOf RssChannel
+     */
+    public channelGroup : IRssChannelGroup
 }

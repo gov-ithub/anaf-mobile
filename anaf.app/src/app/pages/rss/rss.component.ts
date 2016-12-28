@@ -16,6 +16,18 @@ export class RssComponent{
     
     constructor(private rss:RssService, private rssChannel : RssChannel){ 
 
+        let rssChannelList : RssChannels;
+
+        this.rss.getChannelList().subscribe(
+            channels => {
+                rssChannelList = channels;
+                console.log(rssChannelList);
+            },
+            error=>{
+                console.log(error);
+            }
+        );
+
         this.rss.getChannel("BUC_ACH_BUN").subscribe(
             channel=>{
                 this.rssChannel = channel;
