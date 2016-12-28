@@ -1,7 +1,9 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage, AboutPage, ContactPage,AsistentaPage } from './pages/index';
+import { HomePage, AboutPage, ContactPage, AsistentaPage, RssComponent } from './pages/index';
+import { RssService } from './providers/rss.service';
+import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST } from './shared/config';
 
 @NgModule({
     declarations: [
@@ -9,13 +11,18 @@ import { HomePage, AboutPage, ContactPage,AsistentaPage } from './pages/index';
         HomePage,
         AboutPage,
         ContactPage,
-        AsistentaPage
+        AsistentaPage,
+        RssComponent
     ],
-    imports: [ 
+    imports: [
         IonicModule.forRoot(MyApp)
     ],
     bootstrap: [IonicApp],
-    providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }],
+    providers: [
+        { provide: ErrorHandler, useClass: IonicErrorHandler },
+        RssService,
+        { provide: RSS_CHANNEL_LIST_TOKEN, useValue: RSS_CHANNEL_LIST } //required for RSS Channel List configuration
+    ],
     entryComponents: [
         HomePage,
         AboutPage,
