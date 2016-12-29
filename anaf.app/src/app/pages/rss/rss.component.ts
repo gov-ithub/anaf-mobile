@@ -18,24 +18,24 @@ export class RssComponent{
 
         let rssChannelList : RssChannels;
 
-        this.rss.getChannelList().subscribe(
-            channels => {
-                rssChannelList = channels;
-                console.log(rssChannelList);
-            },
-            error=>{
-                console.log(error);
-            }
-        );
+        // this.rss.getChannelList().subscribe(
+        //     channels => {
+        //         rssChannelList = channels;
+        //         console.log(rssChannelList);
+        //     },
+        //     error=>{
+        //         console.log(error);
+        //     }
+        // );
 
-        this.rss.getChannel("BUC_ACH_BUN").subscribe(
-            channel=>{
-                this.rssChannel = channel;
-            },
-            error=>{
-                console.log(error);
-            }
-        );
+        // this.rss.getChannel("BUC_ACH_BUN").subscribe(
+        //     channel=>{
+        //         this.rssChannel = channel;
+        //     },
+        //     error=>{
+        //         console.log(error);
+        //     }
+        // );
         
     }
     
