@@ -1,9 +1,10 @@
-﻿import { IRssChannels } from '../models/index';
+import { IRssChannels } from '../models/index';
 import { OpaqueToken } from '@angular/core';
 
 /**
  * Configuration for RSS Channel List
  */
+
 
 export const RSS_CHANNEL_LIST: IRssChannels = {
     channels: [{ //Anunturi de achizitie bunuri si servicii
@@ -370,6 +371,7 @@ export const RSS_CHANNEL_LIST: IRssChannels = {
         }
     },
     ]
+
 }
 
 

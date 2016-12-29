@@ -2,6 +2,7 @@ import {IRssChannel} from './rss-channel.model';
 import {IRssFeedItem} from './rss-feed-item.model';
 
 
+
 /**
  * Interface for RSS Feed
  * 
@@ -46,5 +47,6 @@ export class RssFeed implements IRssFeed{
      * @type {Array<IRssFeedItem>}
      * @memberOf RssFeed
      */
+
     feed : Array<IRssFeedItem>
 }

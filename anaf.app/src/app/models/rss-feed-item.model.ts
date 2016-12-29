@@ -1,3 +1,4 @@
+
 /**
  * Interface for RSS Feed Item
  * 
@@ -70,5 +71,6 @@ export class RssFeedItem implements IRssFeedItem{
      * @type {string}
      * @memberOf RssFeedItem
      */
+
     title: string;
 }
