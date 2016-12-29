@@ -135,10 +135,10 @@ export class RssService {
 
         for (let feedItem of jsonBody.rss.channel.item) {
             let item = new RssFeedItem();
-            item.description = feedItem.description;
-            item.link = feedItem.link;
-            item.pubDate = feedItem.pubDate;
-            item.title = feedItem.title;
+            item.description = feedItem.description._text;
+            item.link = feedItem.link._text;
+            item.pubDate = feedItem.pubDate._text;
+            item.title = feedItem.title._text;
             rssFeed.feed.push(item);
         }
 

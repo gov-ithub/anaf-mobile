@@ -1,0 +1,4 @@
+<ion-list *ngIf="rssFeed">
+    <rss-feed-item *ngFor="let item of rssFeed.feed" [feedItem] = "item" >
+    </rss-feed-item>
+</ion-list>
