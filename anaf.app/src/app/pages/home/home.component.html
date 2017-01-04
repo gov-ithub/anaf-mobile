@@ -1,39 +1,19 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+   <!-- <ion-navbar>
+        <ion-title>Home</ion-title>
+    </ion-navbar>-->
 </ion-header>
 
 <ion-content padding class="home">
 
-    <h2 class="center">Ionic Tabs Starter</h2>
 
-   <div class="center">
-        <p class="ionic-logo"></p>
-    </div>
 
-    <ion-card>
-        <ion-card-header>
-            Docs are here to help
-        </ion-card-header>
-
-        <ion-list>
-            <button ion-item (click)="about()">
-                <ion-icon name="jet" item-left></ion-icon>
-                About
-            </button>
-
-            <button ion-item (click)="contact()">
-                <ion-icon name="ionic" item-left></ion-icon>
-                Contact
-            </button>
-
-            <button ion-item (click)="help()">
-                <ion-icon name="help" item-left></ion-icon>
-                Asistenta
-            </button>
-        </ion-list>
-        
-    </ion-card>
+    <ion-tabs>
+        <ion-tab tabTitle="Tablou" tabIcon="speedometer" [root]="tablou"></ion-tab>
+        <ion-tab tabTitle="Asistenta" tabIcon="help" [root]="asistenta"></ion-tab>
+        <ion-tab tabTitle="Instrumente" tabIcon="heart" [root]="instrumente"></ion-tab>
+        <ion-tab tabTitle="Contact" tabIcon="mail" [root]="contact"></ion-tab>
+        <ion-tab tabTitle="Info" tabIcon="notifications" [root]="info"></ion-tab>
+    </ion-tabs>
 
 </ion-content>
