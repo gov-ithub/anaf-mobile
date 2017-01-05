@@ -6,11 +6,10 @@
 
 
 <ion-content padding>
-
     <ion-list>
-        <button ion-item>
-            <ion-icon name="jet" item-left></ion-icon>
-            About
-        </button>
+        <button ion-item (click)="verificareCif()">Verificare CIF</button>
+        <button ion-item (click)="calculatorVenit()"> Calculator venit</button>
+        <button ion-item (click)="calculatorTaxaAuto()"> Calculator taxa auto/timbru</button>
+        <button ion-item (click)="calculatorTva()"> Calculator TVA</button>
     </ion-list>
 </ion-content>

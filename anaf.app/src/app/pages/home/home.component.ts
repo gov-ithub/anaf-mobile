@@ -11,14 +11,14 @@ import {TablouPage} from '../tablou/tablou.component';
     templateUrl: 'home.component.html'
 })
 export class HomePage {
-    tablou: any;
-    asistenta: any;
-    instrumente: any;
-    contact: any;
-    info: any;
+    private tablou: any;
+    private asistenta: any;
+    private instrumente: any;
+    private contact: any;
+    private info: any;
 
 
-    constructor(private navController: NavController) {
+    constructor() {
         this.tablou = TablouPage;
         this.asistenta = AsistentaPage;
         this.instrumente = InstrumentePage;
@@ -26,33 +26,8 @@ export class HomePage {
         this.info = InfoPage;
     }
 
-    /*   about() {
-     this.navController.push(AboutPage);
+    /*
+     onLink(url: string) {
+     window.open(url);
      }*/
-
-    /*tablou() {
-     this.navController.push(TablouPage);
-     }
-
-     asistenta() {
-     this.navController.push(AsistentaPage);
-     }
-
-     instrumente() {
-     this.navController.push(InstrumentePage);
-     }
-
-     contact() {
-     this.navController.push(ContactPage);
-     }
-
-     info() {
-     this.navController.push(InfoPage);
-     }
-     */
-
-
-    onLink(url: string) {
-        window.open(url);
-    }
 }

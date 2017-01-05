@@ -1,19 +1,18 @@
 <ion-header>
-   <!-- <ion-navbar>
-        <ion-title>Home</ion-title>
-    </ion-navbar>-->
+    <!-- <ion-navbar>
+         <ion-title>Home</ion-title>
+     </ion-navbar>-->
 </ion-header>
 
 <ion-content padding class="home">
 
 
-
     <ion-tabs>
-        <ion-tab tabTitle="Tablou" tabIcon="speedometer" [root]="tablou"></ion-tab>
-        <ion-tab tabTitle="Asistenta" tabIcon="help" [root]="asistenta"></ion-tab>
-        <ion-tab tabTitle="Instrumente" tabIcon="heart" [root]="instrumente"></ion-tab>
-        <ion-tab tabTitle="Contact" tabIcon="mail" [root]="contact"></ion-tab>
-        <ion-tab tabTitle="Info" tabIcon="notifications" [root]="info"></ion-tab>
+        <ion-tab [root]="tablou" tabTitle="Tablou" tabIcon="speedometer"></ion-tab>
+        <ion-tab [root]="asistenta" tabTitle="Asistenta" tabIcon="help"></ion-tab>
+        <ion-tab [root]="instrumente" tabTitle="Instrumente" tabIcon="cog"></ion-tab>
+        <ion-tab [root]="contact" tabTitle="Contact" tabIcon="mail"></ion-tab>
+        <ion-tab [root]="info" tabTitle="Info" tabIcon="notifications"></ion-tab>
     </ion-tabs>
 
 </ion-content>

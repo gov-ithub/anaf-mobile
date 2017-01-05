@@ -1,18 +1,37 @@
 import {NgModule, ErrorHandler} from '@angular/core';
 import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
 import {MyApp} from './app.component';
-import {HomePage, ContactPage, AsistentaPage, InstrumentePage, InfoPage, TablouPage} from './pages/index';
+import {
+    HomePage,
+    ContactPage,
+    ContactSediiPage,
+    ContactSesizarePage,
+    AsistentaPage,
+    InstrumentePage,
+    InfoPage,
+    TablouPage,
+    InstrumenteVerificareCifPage,
+    InstrumenteCalculatorVenitPage,
+    InstrumenteCalculatorTaxaAutoPage,
+    InstrumenteCalculatorTvaPage
+} from './pages/index';
+/*import {AboutPage} from "./pages/about/about.component";*/
 
 @NgModule({
     declarations: [
         MyApp,
         HomePage,
-        //  AboutPage,
         ContactPage,
+        ContactSediiPage,
+        ContactSesizarePage,
         AsistentaPage,
         InstrumentePage,
         InfoPage,
-        TablouPage
+        TablouPage,
+        InstrumenteVerificareCifPage,
+        InstrumenteCalculatorVenitPage,
+        InstrumenteCalculatorTaxaAutoPage,
+        InstrumenteCalculatorTvaPage
     ],
     imports: [
         IonicModule.forRoot(MyApp)
@@ -21,12 +40,17 @@ import {HomePage, ContactPage, AsistentaPage, InstrumentePage, InfoPage, TablouP
     providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}],
     entryComponents: [
         HomePage,
-        //AboutPage,
         ContactPage,
+        ContactSediiPage,
+        ContactSesizarePage,
         AsistentaPage,
         InstrumentePage,
         InfoPage,
-        TablouPage
+        TablouPage,
+        InstrumenteVerificareCifPage,
+        InstrumenteCalculatorVenitPage,
+        InstrumenteCalculatorTaxaAutoPage,
+        InstrumenteCalculatorTvaPage
     ]
 })
 export class AppModule {
