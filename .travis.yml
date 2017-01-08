@@ -13,9 +13,6 @@ branches:
   - master
 
 install:
-  - npm cache clean
-  - npm install -g ionic@2.1.13
-  - npm install -g cordova@6.4.0
   - cd ./anaf.app 
   # - echo y | android update sdk -u --filter android-22,android-23
   - npm install
