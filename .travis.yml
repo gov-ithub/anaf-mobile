@@ -1,10 +1,6 @@
 language: android
 
-node_js:
-  - 6.9.1
-
-notifications:
-  email: false
+cache: false
 
 sudo: false
 
@@ -13,11 +9,20 @@ branches:
   - master
 
 install:
-  - cd ./anaf.app 
-  # - echo y | android update sdk -u --filter android-22,android-23
-  - npm install
+  - npm install npm
+
+ before_script:
+   - cd ./anaf.app 
+   - npm install
 
 script:
+
+  # install build dependecies
+  - npm install -g cordova
+  - npm install -g ionic
+
+  # install plugins etc.
+  - ionic state restore
   - npm run build
   
 release:
