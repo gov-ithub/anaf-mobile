@@ -1,8 +1,8 @@
-language: android
-
-cache: false
-
 sudo: false
+
+language: node_js
+node_js:
+  - "6.9.1"
 
 branches:
   only:
@@ -16,7 +16,6 @@ install:
    - npm install
 
 script:
-
   # install build dependecies
   - npm install -g cordova
   - npm install -g ionic
