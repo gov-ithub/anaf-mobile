@@ -26,12 +26,27 @@
 // are different per mode.
 
 $colors: (
-  primary:    #387ef5,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222,
-  favorite:   #69BB7B
+  primary:        #323266,
+  secondary:      #32db64,
+  danger:         #f53d3d,
+  light:          #f4f4f4,
+  dark:           #222,
+  favorite:       #69BB7B,
+
+  // Common colors
+  accent:         #dfaf07,
+  bottomNav:      #eee,
+  pageColor:      #fff,
+  dividers:       #e0e0e0,
+  titlesDarkBg:   #fff,
+  titlesLightBg:  #222,
+  bodyText:       #222,
+  // Common colors
+
+  // Android colors
+  androidStatusBar:   #2a2859,
+  // Android colors
+
 );
 
 @import "app.core.scss";

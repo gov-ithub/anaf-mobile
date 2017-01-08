@@ -1,25 +1,26 @@
 {
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-	"declaration": true,
-	"emitDecoratorMetadata": true,
-	"experimentalDecorators": true,
-	"lib": [
-		"dom",
-		"es2015"
-	],
-	"module": "es2015",
-	"moduleResolution": "node",
-	"target": "es5"
-  },
-  "include": [
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "module": "es2015",
+        "moduleResolution": "node",
+        "target": "es5",
+        "sourceMap": true
+    },
+    "include": [
         "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
-  "compileOnSave": false,
-  "atom": {
-    "rewriteTsconfig": false
-  }
+    ],
+    "exclude": [
+        "node_modules"
+    ],
+    "compileOnSave": false,
+    "atom": {
+        "rewriteTsconfig": false
+    }
 }
