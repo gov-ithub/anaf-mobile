@@ -1,57 +1,26 @@
-import {NgModule, ErrorHandler} from '@angular/core';
-import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
-import {MyApp} from './app.component';
-import {
-    HomePage,
-    ContactPage,
-    ContactSediiPage,
-    ContactSesizarePage,
-    AsistentaPage,
-    InstrumentePage,
-    InfoPage,
-    TablouPage,
-    InstrumenteVerificareCifPage,
-    InstrumenteCalculatorVenitPage,
-    InstrumenteCalculatorTaxaAutoPage,
-    InstrumenteCalculatorTvaPage
-} from './pages/index';
-/*import {AboutPage} from "./pages/about/about.component";*/
+import { NgModule, ErrorHandler } from '@angular/core';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { MyApp } from './app.component';
+import { HomePage, AboutPage, ContactPage,AsistentaPage } from './pages/index';
 
 @NgModule({
     declarations: [
         MyApp,
         HomePage,
+        AboutPage,
         ContactPage,
-        ContactSediiPage,
-        ContactSesizarePage,
-        AsistentaPage,
-        InstrumentePage,
-        InfoPage,
-        TablouPage,
-        InstrumenteVerificareCifPage,
-        InstrumenteCalculatorVenitPage,
-        InstrumenteCalculatorTaxaAutoPage,
-        InstrumenteCalculatorTvaPage
+        AsistentaPage
     ],
-    imports: [
+    imports: [ 
         IonicModule.forRoot(MyApp)
     ],
     bootstrap: [IonicApp],
-    providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}],
+    providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }],
     entryComponents: [
         HomePage,
+        AboutPage,
         ContactPage,
-        ContactSediiPage,
-        ContactSesizarePage,
-        AsistentaPage,
-        InstrumentePage,
-        InfoPage,
-        TablouPage,
-        InstrumenteVerificareCifPage,
-        InstrumenteCalculatorVenitPage,
-        InstrumenteCalculatorTaxaAutoPage,
-        InstrumenteCalculatorTvaPage
+        AsistentaPage
     ]
 })
-export class AppModule {
-}
+export class AppModule { } 
