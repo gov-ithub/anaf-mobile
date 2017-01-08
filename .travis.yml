@@ -21,7 +21,7 @@ script:
   - npm install -g cordova
   - npm install -g ionic
 
-  # install plugins etc.
+  # install plugins etc. 
   - ionic state restore
   - npm run build
   
