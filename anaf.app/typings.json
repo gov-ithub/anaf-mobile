@@ -1,7 +1,5 @@
 {
-  "dependencies": {
-    "xml-js": "registry:dt/xml-js#0.9.6+20161102144920"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "globalDependencies": {
     "es6-shim": "registry:dt/es6-shim#0.31.2+20160602141504"
