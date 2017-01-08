@@ -1,7 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage, AboutPage, ContactPage, AsistentaPage, RssComponent, RssFeedComponent, RssFeedItemComponent  } from './pages/index';
+import { HomePage, AboutPage, ContactPage, AsistentaPage, RssFeedComponent, RssFeedItemComponent  } from './pages/index';
 import { RssService } from './providers/rss.service';
 import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST } from './shared/config';
 
@@ -12,7 +12,6 @@ import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST } from './shared/config';
         AboutPage,
         ContactPage,
         AsistentaPage,
-        RssComponent,
         RssFeedComponent,
         RssFeedItemComponent
     ],
