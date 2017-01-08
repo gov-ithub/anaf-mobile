@@ -9,16 +9,15 @@ branches:
   - master
 
 install:
-  - npm install npm
+  #- npm install npm
 
 before_script:
-   - cd ./anaf.app 
-   - npm install
-
-script:
-  # install build dependecies
+  - cd ./anaf.app 
+  - npm install
   - npm install -g cordova
   - npm install -g ionic
+
+script:
 
   # install plugins etc. 
   - ionic state restore
