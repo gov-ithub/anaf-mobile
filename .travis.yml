@@ -16,6 +16,8 @@ before_script:
   - npm install
   - npm install -g cordova
   - npm install -g ionic
+  - cd ./anaf.app/src
+  - typescript install
 
 script:
 
