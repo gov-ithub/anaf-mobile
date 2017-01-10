@@ -12,7 +12,7 @@ Serviciu care indeplineste urmatoarele functionalitati:
 - `cd anaf.app`
 - `npm install`
 - `cd src`
-- `typescript install`
+- `typings install`
 
 ## Configurare
 
