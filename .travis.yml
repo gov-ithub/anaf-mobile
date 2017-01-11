@@ -1,42 +1,31 @@
 dist: trusty
 sudo: false
-
 language: node_js
 node_js:
-  - "6.9.1"
-
+- 6.9.1
 branches:
   only:
   - master
-
 addons:
   sonarqube: true
-
 env:
   global:
-    - secure: "Y/vr3ktmQUJKc1NKSNcF0IuK0GZQhQtXOcqSm7SiLoiZTQ8HBdGp2KStoWE+9ZcspoSlvXoTQ1ZCVTjvi4Zbri5jz3gRp25lR8L5WGxjQ55xKJKWlzPGr7kQ59zttA3JgY/021vMwtSa03q5mg6Ytm/9hJGYjAudYS+S05khh/xWG/aNQ4eKsCWiJgTR76Axk4+eyrLIjzMPoDnmrsJcksvmEUH8l3pkpW6p+I/CXKTDaMlKxOl3E5B60keKpTBKbBPdCl1oklrh67kyPBNNauPgXzpzOvhpJ1y6k44kjCRUDWjCOPfya3jm57MNxOoBL4QTZdyeTlQ6zTUk1ZyE9DJDqCrB8SJvFBEoTUnRnzo+DQqK5BCNef55Zrx5dMg0ElzTp8XYWjyfa2UaEBSnQscXqA4vAdSDwvWbj4ag+0JS32R8i2fiOQg+BhrVS19PxeRZCq+lFnr0gi2JrFSazuE02N5I7vjUxSGD9KMl5SZNT0g+5MDa/b7C5MO7C/pLUyf+4J0oinAaASbCshrnmyznBuTrlVAwsEnF1IC5iB2uaq+GZ8VrLGJDqinwYxrd2zjsDrvHj/iqe7w4vAZ0uem226NLQ0DHBqVK34tjVpdYJwBsq4ruMyQjsVVHifNnaQGijmAybfSZIxEUjVcCaZpp8OXm/WopvNMjXUwRMIA="
-  
+  - secure: I9ovxVH6r2px+vNX7F42ZCoo+1nDb4yWA6tj4KvuAdUZau4VF8+Z1kDkTfZgoigxCNOr9Snlgh1H3SONRgRuNas5Df+mZqXQKQNb8td3r5TBsSgsu+zhBlIehnb6Tz/xKARdmhhlp7s67wrdEZo8Y6fjfJVjs8eedRo/5w0PfDU+W3c6ZoB1DZwYIyjLChoXZrbB8ELTxiJdFkcW4MfCW29SJmn1HgzknT0NpMMmTC5VZ7ei6MYc1BGvdnuNUXDFh1/eeVQX7O/v5+nF3t4ERkz6sEhIAiNFOyoDiskDY6JTZijnVmTd2r1WQiKY3/S0Xygkh0XqoAC5L0VKxS3a9dbEle8U++yHZp+oOkDR6nJM1rs6f5F69sqWfg6DCdlIfGM8PqjYj0+3lTi1bcuqUmRerc3bq3nsZMN5JTRENP9WUAfZDNVt2SjXUko6KnrghMfYNlzkicAXWGFnB8xXOJ0EkyoztUKT8EbUkMGT0S0mcHjW6iIXdJ0U/0lvuYlwGsKSfSD0i2jhD3u45Pie4NGV5EpMbHb4TOqvv5Rrdd2QJoLnQP0XnS21ZYqHrUIUBpdeYEIjWRum2BVboAtTkQCIxAYCbbbRBVp5HqmAzknCZWQcK/Sup7mvWYcFenGMmG7jbNmAExYa0JJ8JU80jLZA3Ao/1jgIAYKyKrN9QXw=
 install:
-  #- npm install npm
-  - npm install typings -g
-
+- npm install typings -g
 before_script:
-  - cd ./anaf.app 
-  - npm install
-  - npm install -g cordova
-  - npm install -g ionic
-  - cd src
-  - typings install
-  - cd ..
-  - mkdir platforms
-  - mkdir plugins
-  - mkdir www
-
+- cd ./anaf.app
+- npm install
+- npm install -g cordova
+- npm install -g ionic
+- cd src
+- typings install
+- cd ..
+- mkdir platforms
+- mkdir plugins
+- mkdir www
 script:
-  # install plugins etc. 
-  - ionic state restore
-  - npm run build
-  # go to root folder
-  - cd ..
-  # sonarqube analysis 
-  - sonar-scanner -Dsonar.login=$SONAR_TOKEN 
+- ionic state restore
+- npm run build
+- cd ..
+- sonar-scanner -Dsonar.login=$SONAR_TOKEN
