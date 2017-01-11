@@ -22,7 +22,8 @@
     "rxjs": "5.0.0-beta.12",
     "xml-js": "^0.9.7",
     "zone.js": "~0.6.26",
-    "sw-toolbox": "^3.4.0"
+    "sw-toolbox": "^3.4.0",
+    "tslint-eslint-rules": "3.2.3"
   },
   "devDependencies": {
     "@ionic/app-scripts": "1.0.0",
@@ -42,6 +43,7 @@
     "watch": "ionic-app-scripts watch",
     "rollup": "ionic-app-scripts rollup",
     "serve": "ionic-app-scripts serve",
+    "lint": "ionic-app-scripts lint",
     "serve:before": "watch",
     "emulate:before": "build",
     "deploy:before": "build",
