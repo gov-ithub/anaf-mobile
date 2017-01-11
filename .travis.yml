@@ -8,6 +8,10 @@ branches:
   only:
   - master
 
+ env:
+  global:
+    - secure: "Y/vr3ktmQUJKc1NKSNcF0IuK0GZQhQtXOcqSm7SiLoiZTQ8HBdGp2KStoWE+9ZcspoSlvXoTQ1ZCVTjvi4Zbri5jz3gRp25lR8L5WGxjQ55xKJKWlzPGr7kQ59zttA3JgY/021vMwtSa03q5mg6Ytm/9hJGYjAudYS+S05khh/xWG/aNQ4eKsCWiJgTR76Axk4+eyrLIjzMPoDnmrsJcksvmEUH8l3pkpW6p+I/CXKTDaMlKxOl3E5B60keKpTBKbBPdCl1oklrh67kyPBNNauPgXzpzOvhpJ1y6k44kjCRUDWjCOPfya3jm57MNxOoBL4QTZdyeTlQ6zTUk1ZyE9DJDqCrB8SJvFBEoTUnRnzo+DQqK5BCNef55Zrx5dMg0ElzTp8XYWjyfa2UaEBSnQscXqA4vAdSDwvWbj4ag+0JS32R8i2fiOQg+BhrVS19PxeRZCq+lFnr0gi2JrFSazuE02N5I7vjUxSGD9KMl5SZNT0g+5MDa/b7C5MO7C/pLUyf+4J0oinAaASbCshrnmyznBuTrlVAwsEnF1IC5iB2uaq+GZ8VrLGJDqinwYxrd2zjsDrvHj/iqe7w4vAZ0uem226NLQ0DHBqVK34tjVpdYJwBsq4ruMyQjsVVHifNnaQGijmAybfSZIxEUjVcCaZpp8OXm/WopvNMjXUwRMIA="
+  
 install:
   #- npm install npm
   - npm install typings -g
@@ -28,4 +32,5 @@ script:
   # install plugins etc. 
   - ionic state restore
   - npm run build
-  
+  # sonarqube analysis 
+  - sonar-scanner -Dsonar.login=$SONAR_TOKEN 
