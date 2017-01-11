@@ -10,15 +10,21 @@ branches:
 
 install:
   #- npm install npm
+  - npm install typings -g
 
 before_script:
   - cd ./anaf.app 
   - npm install
   - npm install -g cordova
   - npm install -g ionic
+  - cd src
+  - typings install
+  - cd ..
+  - mkdir platforms
+  - mkdir plugins
+  - mkdir www
 
 script:
-
   # install plugins etc. 
   - ionic state restore
   - npm run build
