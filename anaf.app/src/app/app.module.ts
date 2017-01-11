@@ -15,6 +15,8 @@ import {
     InstrumenteCalculatorTaxaAutoPage,
     InstrumenteCalculatorTvaPage
 } from './pages/index';
+import { RssService } from './providers/rss.service';
+import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST } from './shared/config';
 /*import {AboutPage} from "./pages/about/about.component";*/
 
 @NgModule({
@@ -31,13 +33,19 @@ import {
         InstrumenteVerificareCifPage,
         InstrumenteCalculatorVenitPage,
         InstrumenteCalculatorTaxaAutoPage,
-        InstrumenteCalculatorTvaPage
+        InstrumenteCalculatorTvaPage,
+        RssFeedComponent,
+        RssFeedItemComponent
     ],
     imports: [
         IonicModule.forRoot(MyApp)
     ],
     bootstrap: [IonicApp],
-    providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}],
+    providers: [
+        { provide: ErrorHandler, useClass: IonicErrorHandler },
+        RssService,
+        { provide: RSS_CHANNEL_LIST_TOKEN, useValue: RSS_CHANNEL_LIST } //required for RSS Channel List configuration
+    ],
     entryComponents: [
         HomePage,
         ContactPage,
