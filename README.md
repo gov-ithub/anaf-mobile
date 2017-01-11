@@ -3,24 +3,37 @@ Se doreste o aplicatie independenta care, pentru inceput, va furniza o serie de 
 
 ## Instalare
 
-### MS Visual Studio Community
+### Configurari IDE
+
+#### MS Visual Studio Community
 - Type Script 2.0 Tools
 - Sterge din C:\Program Files (x86)\Microsoft Visual Studio 14.0\Web\External node, npm si node_modules
 - Vom folosi nodejs de la sursa
 
-### Webstorm
+#### Webstorm
 - [Suport TypeScript](https://www.jetbrains.com/help/webstorm/2016.3/typescript-support.html)
 - [Utilizare PhoneGap/Cordova](https://www.jetbrains.com/help/webstorm/2016.2/using-phonegap-cordova.html)
 
 ### General
-- Ultima versiune de NodeJS & NPM https://nodejs.org/en/
-- Command prompt (cmd): 
-  - `npm install -g cordova@6.4.0`
-  - `npm install -g ionic@2.1.13`
+- Instaleaza ultima versiune de NodeJS & NPM https://nodejs.org/en/
 
-### In directorul cu anaf.app (cmd)
-- `npm install`
-- `npm run watch`
+### In directorul cu anaf.app
+- shell: 
+```
+cd ./anaf.app 
+npm install
+npm install -g cordova
+npm install -g ionic
+cd src
+typings install
+cd ..
+mkdir platforms
+mkdir plugins
+mkdir www
+
+ionic state restore
+npm run serve
+```
 - acceseaza in browser adresa servita de ionic
 
 
@@ -30,7 +43,9 @@ Se doreste o aplicatie independenta care, pentru inceput, va furniza o serie de 
 - [Cordova] (https://cordova.apache.org/)
 
 ## Development IDE & tools:
-- Recomandat [Visual Studio Community] (https://www.visualstudio.com/vs/community/), are deja plugin-uri pentru cordova si ripple
+- Recomandat 
+	- [Visual Studio Community] (https://www.visualstudio.com/vs/community/), are deja plugin-uri pentru cordova si ripple
+	- [Webstorm] (https://www.jetbrains.com/webstorm/)
 - Alte IDE-uri pot fi folosite
 
 ## Contribuie
