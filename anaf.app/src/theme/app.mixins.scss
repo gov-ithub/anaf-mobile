@@ -1,0 +1,20 @@
+﻿$anaf-icons: asistenta;
+
+@mixin anaf-icon($name, $content, $content-outline: $content) {
+
+    .tabs-md .tab-button {
+        .ion-ios-ic-#{$name}:before,
+        .ion-md-ic-#{$name}:before {
+            content: $content;
+        }
+    }
+
+    .tabs-md .tab-button[aria-selected=true] {
+        .ion-ios-ic-#{$name}:before,
+        .ion-md-ic-#{$name}:before {
+            content: $content-outline;
+        }
+    }
+
+
+}

@@ -13,7 +13,9 @@ import {
     InstrumenteVerificareCifPage,
     InstrumenteCalculatorVenitPage,
     InstrumenteCalculatorTaxaAutoPage,
-    InstrumenteCalculatorTvaPage
+    InstrumenteCalculatorTvaPage,
+    RssFeedComponent,
+    RssFeedItemComponent
 } from './pages/index';
 import { RssService } from './providers/rss.service';
 import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST } from './shared/config';
