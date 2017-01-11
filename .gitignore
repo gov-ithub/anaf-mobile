@@ -277,4 +277,5 @@ anaf.app/resources/signing
 
 anaf.app/www
 anaf.app/typings
+anaf.app/src/typings
 .vscode
