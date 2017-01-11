@@ -36,5 +36,7 @@ script:
   # install plugins etc. 
   - ionic state restore
   - npm run build
+  # go to root folder
+  - cd ..
   # sonarqube analysis 
   - sonar-scanner -Dsonar.login=$SONAR_TOKEN 
