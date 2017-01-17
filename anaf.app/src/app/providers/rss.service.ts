@@ -1,9 +1,9 @@
-import { Injectable, Inject, OpaqueToken } from '@angular/core';
-import { Jsonp, Http, Response, Headers } from '@angular/http';
+import { Injectable, Inject } from '@angular/core';
+import { Http, Response, Headers } from '@angular/http';
 import '../rxjs-operators';
 import { Observable } from 'rxjs/Observable';
 import { RssChannels, IRssChannels,IRssChannel, RssChannel, RssFeed, RssFeedItem, IRssFeed } from '../models/index';
-import { RSS_CHANNEL_LIST, RSS_CHANNEL_LIST_TOKEN } from '../shared/config';
+import { RSS_CHANNEL_LIST_TOKEN } from '../shared/config';
 
 /**
  * External library required for XML to JSON parsing
