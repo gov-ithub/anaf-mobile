@@ -22,12 +22,12 @@
 }
 
 
-@include anaf-icon(instrumente, "\e92f", "\e930");
-@include anaf-icon(notificare, "\e931", "\e932");
-@include anaf-icon(contact, "\e926", "\e927");
-@include anaf-icon(info, "\e92d", "\e92e");
-@include anaf-icon(tablou, "\e934", "\e935");
-@include anaf-icon(asistenta, "\e93c", "\e923");
+@include anaf-icon-menu(instrumente, "\e92f", "\e930");
+@include anaf-icon-menu(notificare, "\e931", "\e932");
+@include anaf-icon-menu(contact, "\e926", "\e927");
+@include anaf-icon-menu(info, "\e92d", "\e92e");
+@include anaf-icon-menu(tablou, "\e934", "\e935");
+@include anaf-icon-menu(asistenta, "\e93c", "\e923");
 
 @include anaf-icon(back, "\e924");
 @include anaf-icon(cautare, "\e925");

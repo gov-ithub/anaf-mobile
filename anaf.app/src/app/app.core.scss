@@ -79,3 +79,7 @@
         border-top: 1px solid map-get($colors, dividers);
     }
 }
+
+.button-clear-md.button-small {
+    text-transform: none;
+}
