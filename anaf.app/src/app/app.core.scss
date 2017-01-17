@@ -29,3 +29,53 @@
         background-color: map-get($colors, bottomNav);
     }
 }
+.tabs-ios, .tabs-md {
+    .tabbar {
+        border-top: 1px solid map-get($colors, dividersDark);
+    }
+}
+.tabs-wp {
+    .tabbar {
+        border-bottom: 1px solid map-get($colors, dividersDark);
+    }
+    .tab-button[aria-selected=true] {
+        border-bottom-color: map-get($colors, primary);
+    }
+}
+
+
+.header {
+    .toolbar-ios {
+        /*min-height: 56px;*/
+    }
+
+    .toolbar-background-ios, .toolbar-background-wp {
+        background-color: map-get($colors, primary);
+    }
+
+    .toolbar-background-md {
+        background-color: map-get($colors, androidStatusBar);
+    }
+
+    .toolbar-title-ios, .toolbar-title-md, .toolbar-title-wp {
+        color: map-get($colors, titlesDarkBg);
+    }
+
+    .bar-button-default-md, .bar-button-default-ios, .bar-button-default-wp {
+        color: map-get($colors, titlesDarkBg);
+    }
+}
+
+.list-ios .item-block {
+    .item-inner {
+        border-bottom: 1px solid map-get($colors, dividers);
+    }
+
+    &:last-child {
+        border-bottom: 1px solid map-get($colors, dividers);
+    }
+
+    &:first-child {
+        border-top: 1px solid map-get($colors, dividers);
+    }
+}
