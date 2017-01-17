@@ -19,3 +19,13 @@
 @import "../app/pages/contact/contact.component";
 
 @import "../app/pages/home/home.component";
+
+.tabs-md, .tabs-ios, .tabs-wp {
+    .tab-button[aria-selected=true], .tab-button[aria-selected=true] .tab-button-icon {
+        color: map-get($colors, primary);
+    }
+
+    .tabbar {
+        background-color: map-get($colors, bottomNav);
+    }
+}
