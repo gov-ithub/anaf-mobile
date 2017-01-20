@@ -38,10 +38,17 @@ npm run serve
 ```
 - acceseaza in browser adresa servita de ionic
 
+Alte comenzi utile:
+- `ionic emulate android`
+- `ionic serve -l`
+
 ## Known issues
 `ionic platforms add android` 
 - http://stackoverflow.com/questions/36198165/failed-to-find-android-home-environment-variable
 - https://forum.ionicframework.com/t/error-requirements-check-failed-for-jdk-1-8-or-greater/68734 
+`install x86 emulator accelerator` 
+- http://stackoverflow.com/questions/41092207/the-intel-x86-emulator-accelerator-haxm-installer-revision-6-0-5-is-showing-no
+
 
 ## Tehnologii folosite
 - [Ionic 2] (http://ionicframework.com/), [docs] (http://ionicframework.com/docs/v2/)
