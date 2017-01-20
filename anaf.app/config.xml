@@ -94,4 +94,6 @@
   <plugin name="cordova-plugin-whitelist" version="1.2.2" />
   <plugin name="ionic-plugin-keyboard" version="2.2.1" />
   <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
+  <plugin name="cordova-plugin-calendar" version="4.5.5" />
+  <plugin name="cordova-plugin-compat" version="1.1.0" />
 </widget>
