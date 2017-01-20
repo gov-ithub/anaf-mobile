@@ -274,6 +274,7 @@ anaf.app/plugins
 
 # res
 anaf.app/resources/signing
+anaf.app/res
 
 anaf.app/www
 anaf.app/typings

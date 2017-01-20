@@ -16,6 +16,8 @@ Se doreste o aplicatie independenta care, pentru inceput, va furniza o serie de 
 
 ### General
 - Instaleaza ultima versiune de NodeJS & NPM https://nodejs.org/en/
+- Android SDK
+- JDK 1.8
 
 ### In directorul cu anaf.app
 - shell: 
@@ -36,6 +38,10 @@ npm run serve
 ```
 - acceseaza in browser adresa servita de ionic
 
+## Known issues
+`ionic platforms add android` 
+- http://stackoverflow.com/questions/36198165/failed-to-find-android-home-environment-variable
+- https://forum.ionicframework.com/t/error-requirements-check-failed-for-jdk-1-8-or-greater/68734 
 
 ## Tehnologii folosite
 - [Ionic 2] (http://ionicframework.com/), [docs] (http://ionicframework.com/docs/v2/)

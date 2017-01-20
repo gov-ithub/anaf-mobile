@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { SampleCalendarPage } from './../samples/calendar.component';
 
 /*
   Generated class for the Tablou page.
@@ -13,10 +14,13 @@ import { NavController } from 'ionic-angular';
 })
 export class TablouPage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navController: NavController) {}
 
   ionViewDidLoad() {
     console.log('Hello TablouPage Page');
   }
 
+  sample_calendar() {
+    this.navController.push(SampleCalendarPage);
+  }
 }
