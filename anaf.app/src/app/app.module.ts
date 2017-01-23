@@ -20,7 +20,8 @@ import {
 } from './pages/index';
 import { RssService } from './providers/rss.service';
 import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST } from './shared/config';
-/*import {AboutPage} from "./pages/about/about.component";*/
+import { LoggerService } from './shared/logger.service';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +49,9 @@ import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST } from './shared/config';
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     RssService,
-    { provide: RSS_CHANNEL_LIST_TOKEN, useValue: RSS_CHANNEL_LIST } //required for RSS Channel List configuration
+    //required for RSS Channel List configuration
+    { provide: RSS_CHANNEL_LIST_TOKEN, useValue: RSS_CHANNEL_LIST },
+    LoggerService
   ],
   entryComponents: [
     HomePage,

@@ -49,6 +49,17 @@ Alte comenzi utile:
 `install x86 emulator accelerator` 
 - http://stackoverflow.com/questions/41092207/the-intel-x86-emulator-accelerator-haxm-installer-revision-6-0-5-is-showing-no
 
+```
+Your emulator is out of date, please update by launching Android Studio:
+ - Open `SDK Manager`
+ - Click `SDK Tools` tab
+ - Check `Android SDK Tool`" checkbox
+ - Click `Install {x} packages`
+ - Accept `Terms and Conditions`
+```
+
+bcdedit /set hypervisorlaunchtype off
+
 
 ## Tehnologii folosite
 - [Ionic 2] (http://ionicframework.com/), [docs] (http://ionicframework.com/docs/v2/)

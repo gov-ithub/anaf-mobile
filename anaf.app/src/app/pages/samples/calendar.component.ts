@@ -1,6 +1,7 @@
 ﻿import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { Calendar } from 'ionic-native';
+import { NavController, Platform } from 'ionic-angular';
+import { CalendarService } from './../../providers/calendar.service';
+import { LoggerService } from './../../shared/logger.service';
 
 @Component({
   selector: 'page-sample-calendar',
@@ -9,16 +10,17 @@ import { Calendar } from 'ionic-native';
 
 export class SampleCalendarPage {
 
-  constructor(public navController: NavController) { }
+  constructor(public navController: NavController, public platform: Platform, public calendar: CalendarService, private logger: LoggerService) { }
 
   ionViewDidLoad() {
     console.log('Hello Calendar sample Page');
   }
 
   create_calendar() {
-    Calendar.createCalendar('MyCalendar').then(
-      (msg) => { console.log(msg); },
-      (err) => { console.log(err); }
-    );
+    this.calendar.createNotification(new Date(Date.now() + 60 * 60000), "Test anaf").then((resonse) => {
+      this.logger.debug("event created");
+    }).catch((err) => {
+      alert(err);
+    });
   }
 }

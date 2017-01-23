@@ -1,6 +1,14 @@
 import { IRssChannels } from '../models/index';
 import { OpaqueToken } from '@angular/core';
 
+export interface IConfig {
+  logLevel: string;
+}
+
+export const Config : IConfig = {
+  logLevel: 'DEBUG'
+}
+
 /**
  * Configuration for RSS Channel List
  */
