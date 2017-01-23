@@ -13,19 +13,12 @@ export class AppNotifyService implements INotify {
 
   public add(title: string) {
     return new Promise<boolean>(result => {
-      this.storage.get("anaf:notifications").then((listValue) => {
-        let notifyList: NotificationList = new NotificationList();
-
-        if (listValue) {
-          notifyList.list = JSON.parse(listValue).list;
-        } else {
-          notifyList.list = new Array<NotificationItem>();
-        }
-
+      this.getList().then((notifyList) => {
         notifyList.list = notifyList.list.concat(new NotificationItem(title));
-        this.storage.set("anaf:notifications", notifyList.list).then(() => {
+        this.storage.set("anaf_notifications", notifyList).then(() => {
+          this.log.debug("notification added ");
           return true;
-        })
+        });
       });
     });
   }
@@ -36,15 +29,31 @@ export class AppNotifyService implements INotify {
         let notifyList: NotificationList = new NotificationList();
 
         if (listValue) {
-          notifyList.list = JSON.parse(listValue).list;
+          notifyList.list = listValue;
         } else {
           notifyList.list = new Array<NotificationItem>();
         }
 
         notifyList.list = notifyList.list.concat(new NotificationItem(title, startDate));
         this.storage.set("anaf:notifications", notifyList.list).then(() => {
+          this.log.debug("notification added ");
           return true;
         })
+      });
+    });
+
+  }
+
+  public getList() {
+    return new Promise<NotificationList>(() => {
+      let notifyList: NotificationList = new NotificationList();
+      this.storage.get("anaf_notifications").then((listValue) => {
+        if (listValue) {
+          notifyList = listValue;
+        } else {
+          notifyList = new NotificationList();
+        }
+        return notifyList;
       });
     });
   }

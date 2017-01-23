@@ -1,7 +1,8 @@
-﻿import { Injectable, Inject, OpaqueToken } from '@angular/core';
+﻿import { Injectable } from '@angular/core';
 import { LocalNotifications } from 'ionic-native';
 import { LoggerService } from './../../shared/logger.service';
 import { INotify } from './notify.interface';
+import { NotificationItem, NotificationList } from './../../models';
 
 @Injectable()
 export class LocalNotifyService implements INotify {
@@ -29,6 +30,12 @@ export class LocalNotifyService implements INotify {
         at: new Date(startDate.getDate() - 60 * 60000),
         led: 'FF0000'
       });
+    });
+  }
+
+  public getList() {
+    return new Promise<NotificationList>(result => {
+      return new NotificationList();
     });
   }
 }

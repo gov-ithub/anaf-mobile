@@ -3,6 +3,7 @@ import { Platform } from 'ionic-angular';
 import { Calendar, CalendarOptions } from 'ionic-native';
 import { LoggerService } from './../../shared/logger.service';
 import { INotify } from './notify.interface';
+import { NotificationItem, NotificationList } from './../../models';
 
 @Injectable()
 export class CalendarNotifyService implements INotify {
@@ -41,12 +42,19 @@ export class CalendarNotifyService implements INotify {
           startDate,
           new Date(startDate.getDate() + 10 * 60000),
           this.options
-        ).then((success) => {
-          this.log.debug("event ", title, " at ", startDate);
-        });
+        )
+          .then((success) => {
+            this.log.debug("event ", title, " at ", startDate);
+          });
       }
     });
-  } 
+  }
+
+  public getList() {
+    return new Promise<NotificationList>(result => {
+      return new NotificationList();
+    });
+  }
 
   private init() {
     this.plaform.ready().then(() => {

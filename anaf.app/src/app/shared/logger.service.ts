@@ -2,7 +2,6 @@
 import 'rxjs/add/operator/map';
 import { Logger } from 'angular2-logger/core';
 import { Config } from './config';
-import { OpaqueToken } from '@angular/core';
 
 @Injectable()
 export class LoggerService {

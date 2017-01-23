@@ -1,4 +1,6 @@
-﻿/**
+﻿import { NotificationList } from './../../models';
+
+/**
  * Interface for Notify Services
  * 
  * @export
@@ -17,4 +19,6 @@ export interface INotify {
     * @param startDate start date for event
     */
   schedule(title: string, startDate: Date): Promise<boolean>;
+
+  getList(): Promise<NotificationList>;
 }

@@ -2,9 +2,8 @@
 import { Platform } from 'ionic-angular';
 import { LoggerService } from './../shared/logger.service';
 import { INotify } from './notifications/notify.interface';
-import { LocalNotifyService } from './notifications/localNotify.service';
-import { CalendarNotifyService } from './notifications/calendarNotify.service';
-import { AppNotifyService } from './notifications/appNotify.service';
+import { LocalNotifyService, CalendarNotifyService, AppNotifyService } from './notifications';
+import { NotificationList } from './../models';
 
 /**
   * Notification Service
@@ -22,7 +21,7 @@ export class NotificationService {
   }
 
   public createNotification(title: string, startDate: Date) {
-    this.log.debug("createNotification started");
+    this.log.debug("NotificationService.createNotification started");
     return new Promise<boolean>(resolve => {
       this.schedule(this.localNotify, title, startDate);
       this.schedule(this.calendarNotify, title, startDate);
@@ -32,5 +31,9 @@ export class NotificationService {
 
   private schedule(notifService: INotify, title: string, startDate: Date): void {
     notifService.schedule(title, startDate);
+  }
+
+  public getList() {
+    return this.appNotify.getList();
   }
 }

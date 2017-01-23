@@ -24,6 +24,7 @@ import { LoggerService } from './shared/logger.service';
 import { Logger } from 'angular2-logger/core';
 import { NotificationService } from './providers/notification.service';
 import { Storage } from '@ionic/storage';
+import { LocalNotifyService, CalendarNotifyService, AppNotifyService } from './providers/notifications';
 
 
 @NgModule({
@@ -56,6 +57,9 @@ import { Storage } from '@ionic/storage';
     { provide: RSS_CHANNEL_LIST_TOKEN, useValue: RSS_CHANNEL_LIST },
     Logger,
     LoggerService,
+    LocalNotifyService,
+    AppNotifyService,
+    CalendarNotifyService,
     NotificationService,
     Storage
   ],
