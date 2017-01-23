@@ -96,23 +96,33 @@ export class CalendarService {
   }
 
   public createNotification(startDate: Date, title: string) {
+    this.log.debug("createNotification started");
     return new Promise<boolean>(resolve => {
       this.createCalendarNotification(startDate, title);
+      this.createAppNotification(startDate, title);
     });
   }
 
-  private createCalendarNotification(startDate: Date, title: string): void {
-    if (this.hasCalendar) {
-      Calendar.createEventInteractivelyWithOptions(
-        title,
-        null,
-        null,
-        startDate,
-        new Date(startDate.getDate() + 10 * 60000),
-        this.options
-      ).then((success) => {
+  private createCalendarNotification(startDate: Date, title: string) {
+    return new Promise<void>(resolve => {
+      if (this.hasCalendar) {
+        Calendar.createEventInteractivelyWithOptions(
+          title,
+          null,
+          null,
+          startDate,
+          new Date(startDate.getDate() + 10 * 60000),
+          this.options
+        ).then((success) => {
           this.log.debug("event ", title, " at ", startDate);
         });
-    }
+      }
+    });
+  }
+
+  private createAppNotification(startDate: Date, title: string) {
+    return new Promise<void>(resolve => {
+
+    });
   }
 }

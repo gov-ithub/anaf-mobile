@@ -58,7 +58,12 @@ Your emulator is out of date, please update by launching Android Studio:
  - Accept `Terms and Conditions`
 ```
 
-bcdedit /set hypervisorlaunchtype off
+- dezactivare `bcdedit /set hypervisorlaunchtype off`
+- activare `bcdedit /set hypervisorlaunchtype auto`
+
+## Platforme
+- iOS (>= 8)
+- Android (SDK >= 7)
 
 
 ## Tehnologii folosite

@@ -21,6 +21,8 @@ import {
 import { RssService } from './providers/rss.service';
 import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST } from './shared/config';
 import { LoggerService } from './shared/logger.service';
+import { CalendarService } from './providers/calendar.service';
+import { Logger } from 'angular2-logger/core';
 
 
 @NgModule({
@@ -51,7 +53,9 @@ import { LoggerService } from './shared/logger.service';
     RssService,
     //required for RSS Channel List configuration
     { provide: RSS_CHANNEL_LIST_TOKEN, useValue: RSS_CHANNEL_LIST },
-    LoggerService
+    Logger,
+    LoggerService,
+    CalendarService
   ],
   entryComponents: [
     HomePage,
