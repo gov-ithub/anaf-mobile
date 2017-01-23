@@ -16,6 +16,7 @@
         "@angular/http": "2.2.1",
         "angular2-logger": "0.5.1",
         "es6-shim": "0.35.1",
+        "@ionic/storage": "1.1.7",
         "ionic-angular": "2.0.0-rc.5",
         "ionic-native": "2.2.16",
         "ionicons": "3.0.0",
@@ -37,6 +38,8 @@
         "cordova-plugin-device",
         "cordova-plugin-splashscreen",
         "cordova-plugin-calendar",
+        "de.appplant.cordova.plugin.local-notification",
+        "cordova-sqlite-storage",
         "ionic-plugin-keyboard"
     ],
     "cordovaPlatforms": [],

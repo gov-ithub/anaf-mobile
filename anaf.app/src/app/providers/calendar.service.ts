@@ -2,6 +2,7 @@
 import { Platform } from 'ionic-angular';
 import { Calendar, CalendarOptions } from 'ionic-native';
 import { LoggerService } from './../shared/logger.service';
+import { NotificationService } from './notification.service';
 
 @Injectable()
 export class CalendarService {
@@ -18,13 +19,22 @@ export class CalendarService {
   // calendar options
   private options: CalendarOptions;
 
-  constructor(public plaform: Platform, public log: LoggerService) {
+  constructor(public plaform: Platform, public log: LoggerService, private notif: NotificationService) {
     this.calendarId = -1;
     this.hasCalendar = false;
     this.init();
   }
 
-  public init() {
+  public createNotification(startDate: Date, title: string) {
+    this.log.debug("createNotification started");
+    return new Promise<boolean>(resolve => {
+      this.createCalendarNotification(startDate, title);
+      this.createAppNotification(startDate, title);
+      this.createLocalNotification(startDate, title);
+    });
+  }
+
+  private init() {
     this.plaform.ready().then(() => {
 
       // set calendar options based on preferences
@@ -32,7 +42,6 @@ export class CalendarService {
 
       // set calendar
       this.setCalendar();
-
     });
   }
 
@@ -74,9 +83,6 @@ export class CalendarService {
           this.hasCalendar = false;
         }
       });
-
-
-
     }).catch((err) => {
       this.log.error(err);
       this.hasCalendar = false;
@@ -89,18 +95,6 @@ export class CalendarService {
     this.options.secondReminderMinutes = 15;
     this.options.calendarId = this.calendarId;
     this.options.calendarName = this.CALENDAR_NAME;
-  }
-
-  public getCalendarId(): number {
-    return this.calendarId;
-  }
-
-  public createNotification(startDate: Date, title: string) {
-    this.log.debug("createNotification started");
-    return new Promise<boolean>(resolve => {
-      this.createCalendarNotification(startDate, title);
-      this.createAppNotification(startDate, title);
-    });
   }
 
   private createCalendarNotification(startDate: Date, title: string) {
@@ -122,7 +116,13 @@ export class CalendarService {
 
   private createAppNotification(startDate: Date, title: string) {
     return new Promise<void>(resolve => {
+      
+    });
+  }
 
+  private createLocalNotification(startDate: Date, title: string) {
+    return new Promise<void>(resolve => {
+      this.notif.schedule(startDate, title);
     });
   }
 }
