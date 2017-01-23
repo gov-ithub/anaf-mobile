@@ -1,0 +1,51 @@
+﻿import { Injectable } from '@angular/core';
+import { LocalNotifications } from 'ionic-native';
+import { LoggerService } from './../../shared/logger.service';
+import { INotify } from './notify.interface';
+import { Storage } from '@ionic/storage';
+import { NotificationItem, NotificationList } from './../../models';
+
+@Injectable()
+export class AppNotifyService implements INotify {
+
+  constructor(private log: LoggerService, private storage: Storage) {
+  }
+
+  public add(title: string) {
+    return new Promise<boolean>(result => {
+      this.storage.get("anaf:notifications").then((listValue) => {
+        let notifyList: NotificationList = new NotificationList();
+
+        if (listValue) {
+          notifyList.list = JSON.parse(listValue).list;
+        } else {
+          notifyList.list = new Array<NotificationItem>();
+        }
+
+        notifyList.list = notifyList.list.concat(new NotificationItem(title));
+        this.storage.set("anaf:notifications", notifyList.list).then(() => {
+          return true;
+        })
+      });
+    });
+  }
+
+  public schedule(title: string, startDate: Date) {
+    return new Promise<boolean>(result => {
+      this.storage.get("anaf:notifications").then((listValue) => {
+        let notifyList: NotificationList = new NotificationList();
+
+        if (listValue) {
+          notifyList.list = JSON.parse(listValue).list;
+        } else {
+          notifyList.list = new Array<NotificationItem>();
+        }
+
+        notifyList.list = notifyList.list.concat(new NotificationItem(title, startDate));
+        this.storage.set("anaf:notifications", notifyList.list).then(() => {
+          return true;
+        })
+      });
+    });
+  }
+}

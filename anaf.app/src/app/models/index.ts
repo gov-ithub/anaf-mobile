@@ -6,3 +6,4 @@ export * from './rss-channel.model';
 export * from './rss-channels.model';
 export * from './rss-feed.model';
 export * from './rss-feed-item.model';
+export * from './notification.model';

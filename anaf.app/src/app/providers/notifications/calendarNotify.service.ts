@@ -1,11 +1,11 @@
-﻿import { Injectable, Inject, OpaqueToken } from '@angular/core';
+﻿import { Injectable } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { Calendar, CalendarOptions } from 'ionic-native';
-import { LoggerService } from './../shared/logger.service';
-import { NotificationService } from './notification.service';
+import { LoggerService } from './../../shared/logger.service';
+import { INotify } from './notify.interface';
 
 @Injectable()
-export class CalendarService {
+export class CalendarNotifyService implements INotify {
 
   // calendar name
   private readonly CALENDAR_NAME: string = 'Notificari ANAF';
@@ -19,20 +19,34 @@ export class CalendarService {
   // calendar options
   private options: CalendarOptions;
 
-  constructor(public plaform: Platform, public log: LoggerService, private notif: NotificationService) {
+  constructor(public plaform: Platform, public log: LoggerService) {
     this.calendarId = -1;
     this.hasCalendar = false;
     this.init();
   }
 
-  public createNotification(startDate: Date, title: string) {
-    this.log.debug("createNotification started");
-    return new Promise<boolean>(resolve => {
-      this.createCalendarNotification(startDate, title);
-      this.createAppNotification(startDate, title);
-      this.createLocalNotification(startDate, title);
+  public add(title: string) {
+    return new Promise<void>(resolve => {
+      throw new TypeError("add method not implemented (yet) in calendar");
     });
   }
+
+  public schedule(title: string, startDate: Date) {
+    return new Promise<void>(resolve => {
+      if (this.hasCalendar) {
+        Calendar.createEventInteractivelyWithOptions(
+          title,
+          null,
+          null,
+          startDate,
+          new Date(startDate.getDate() + 10 * 60000),
+          this.options
+        ).then((success) => {
+          this.log.debug("event ", title, " at ", startDate);
+        });
+      }
+    });
+  } 
 
   private init() {
     this.plaform.ready().then(() => {
@@ -95,34 +109,5 @@ export class CalendarService {
     this.options.secondReminderMinutes = 15;
     this.options.calendarId = this.calendarId;
     this.options.calendarName = this.CALENDAR_NAME;
-  }
-
-  private createCalendarNotification(startDate: Date, title: string) {
-    return new Promise<void>(resolve => {
-      if (this.hasCalendar) {
-        Calendar.createEventInteractivelyWithOptions(
-          title,
-          null,
-          null,
-          startDate,
-          new Date(startDate.getDate() + 10 * 60000),
-          this.options
-        ).then((success) => {
-          this.log.debug("event ", title, " at ", startDate);
-        });
-      }
-    });
-  }
-
-  private createAppNotification(startDate: Date, title: string) {
-    return new Promise<void>(resolve => {
-      
-    });
-  }
-
-  private createLocalNotification(startDate: Date, title: string) {
-    return new Promise<void>(resolve => {
-      this.notif.schedule(startDate, title);
-    });
   }
 }

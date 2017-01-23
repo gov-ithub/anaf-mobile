@@ -1,28 +1,36 @@
-﻿import { Injectable, Inject, OpaqueToken } from '@angular/core';
-import { LocalNotifications } from 'ionic-native';
+﻿import { Injectable } from '@angular/core';
+import { Platform } from 'ionic-angular';
 import { LoggerService } from './../shared/logger.service';
+import { INotify } from './notifications/notify.interface';
+import { LocalNotifyService } from './notifications/localNotify.service';
+import { CalendarNotifyService } from './notifications/calendarNotify.service';
+import { AppNotifyService } from './notifications/appNotify.service';
 
+/**
+  * Notification Service
+  * TODO: schedule with options
+  */
 @Injectable()
 export class NotificationService {
 
-  constructor(private log: LoggerService) {
-
-  }
-  public add(title: string) {
-    LocalNotifications.schedule({
-      text: title
-    });
-    LocalNotifications.on(title, () => {
-      alert('test');
-    });
+  constructor(
+    public plaform: Platform,
+    public log: LoggerService,
+    private localNotify: LocalNotifyService,
+    private calendarNotify: CalendarNotifyService,
+    private appNotify: AppNotifyService) {
   }
 
-  public schedule(startDate: Date, title: string) {
-    LocalNotifications.schedule({
-      text: title,
-      at: new Date(startDate.getDate() - 60 * 60000),
-      led: 'FF0000'
+  public createNotification(title: string, startDate: Date) {
+    this.log.debug("createNotification started");
+    return new Promise<boolean>(resolve => {
+      this.schedule(this.localNotify, title, startDate);
+      this.schedule(this.calendarNotify, title, startDate);
+      this.schedule(this.appNotify, title, startDate);
     });
-    
+  }
+
+  private schedule(notifService: INotify, title: string, startDate: Date): void {
+    notifService.schedule(title, startDate);
   }
 }
