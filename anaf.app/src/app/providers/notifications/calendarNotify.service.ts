@@ -45,14 +45,15 @@ export class CalendarNotifyService implements INotify {
         )
           .then((success) => {
             this.log.debug("event ", title, " at ", startDate);
+            resolve();
           });
       }
     });
   }
 
   public getList() {
-    return new Promise<NotificationList>(result => {
-      return new NotificationList();
+    return new Promise<NotificationList>(resolve => {
+      resolve(new NotificationList());
     });
   }
 

@@ -13,3 +13,4 @@ export * from './instrumente/calculator-tva/instrumente-calculator-tva';
 export * from './rss-feed/rss-feed.component';
 export * from './rss-feed-item/rss-feed-item.component';
 export * from './samples/calendar.component';
+export * from './samples/notificari.component';

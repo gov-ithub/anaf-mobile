@@ -8,52 +8,45 @@ import { NotificationItem, NotificationList } from './../../models';
 @Injectable()
 export class AppNotifyService implements INotify {
 
+  private readonly KEY: string = "anaf_notifications";
+
   constructor(private log: LoggerService, private storage: Storage) {
   }
 
   public add(title: string) {
-    return new Promise<boolean>(result => {
+    return new Promise<boolean>(resolve => {
       this.getList().then((notifyList) => {
         notifyList.list = notifyList.list.concat(new NotificationItem(title));
-        this.storage.set("anaf_notifications", notifyList).then(() => {
+        this.storage.set(this.KEY, notifyList).then(() => {
           this.log.debug("notification added ");
-          return true;
+          resolve(true);
         });
       });
     });
   }
 
   public schedule(title: string, startDate: Date) {
-    return new Promise<boolean>(result => {
-      this.storage.get("anaf:notifications").then((listValue) => {
-        let notifyList: NotificationList = new NotificationList();
-
-        if (listValue) {
-          notifyList.list = listValue;
-        } else {
-          notifyList.list = new Array<NotificationItem>();
-        }
-
+    return new Promise<boolean>(resolve => {
+      this.getList().then((notifyList) => {
         notifyList.list = notifyList.list.concat(new NotificationItem(title, startDate));
-        this.storage.set("anaf:notifications", notifyList.list).then(() => {
-          this.log.debug("notification added ");
-          return true;
+        this.storage.set(this.KEY, notifyList).then(() => {
+          this.log.debug("notification scheduled ");
+          resolve(true);
         })
       });
     });
-
   }
 
   public getList() {
-    return new Promise<NotificationList>(() => {
+    return new Promise<NotificationList>(resolve => {
       let notifyList: NotificationList = new NotificationList();
-      this.storage.get("anaf_notifications").then((listValue) => {
+      this.storage.get(this.KEY).then((listValue) => {
         if (listValue) {
           notifyList = listValue;
         } else {
           notifyList = new NotificationList();
         }
-        return notifyList;
+        resolve(notifyList);
       });
     });
   }

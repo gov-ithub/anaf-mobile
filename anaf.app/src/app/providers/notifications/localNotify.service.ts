@@ -24,18 +24,19 @@ export class LocalNotifyService implements INotify {
   }
 
   public schedule(title: string, startDate: Date) {
-    return new Promise<boolean>(result => {
+    return new Promise<boolean>(resolve => {
       LocalNotifications.schedule({
         text: title,
         at: new Date(startDate.getDate() - 60 * 60000),
         led: 'FF0000'
       });
+      resolve(true);
     });
   }
 
   public getList() {
-    return new Promise<NotificationList>(result => {
-      return new NotificationList();
+    return new Promise<NotificationList>(resolve => {
+      resolve(new NotificationList());
     });
   }
 }

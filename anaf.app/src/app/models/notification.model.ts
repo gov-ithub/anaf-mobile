@@ -11,4 +11,8 @@ export class NotificationItem {
 
 export class NotificationList {
   list: Array<NotificationItem>;
+
+  constructor() {
+    this.list = new Array<NotificationItem>();
+  }
 }

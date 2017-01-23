@@ -21,11 +21,12 @@ export class NotificationService {
   }
 
   public createNotification(title: string, startDate: Date) {
-    this.log.debug("NotificationService.createNotification started");
+    this.log.debug("NotificationService.createNotification");
     return new Promise<boolean>(resolve => {
       this.schedule(this.localNotify, title, startDate);
       this.schedule(this.calendarNotify, title, startDate);
       this.schedule(this.appNotify, title, startDate);
+      resolve(true);
     });
   }
 
@@ -34,6 +35,7 @@ export class NotificationService {
   }
 
   public getList() {
+    this.log.debug("NotificationService.getList");
     return this.appNotify.getList();
   }
 }

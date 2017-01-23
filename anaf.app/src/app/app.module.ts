@@ -16,7 +16,8 @@ import {
   InstrumenteCalculatorTvaPage,
   RssFeedComponent,
   RssFeedItemComponent,
-  SampleCalendarPage
+  SampleCalendarPage,
+  SampleNotificariPage
 } from './pages/index';
 import { RssService } from './providers/rss.service';
 import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST } from './shared/config';
@@ -44,7 +45,8 @@ import { LocalNotifyService, CalendarNotifyService, AppNotifyService } from './p
     InstrumenteCalculatorTvaPage,
     RssFeedComponent,
     RssFeedItemComponent,
-    SampleCalendarPage
+    SampleCalendarPage,
+    SampleNotificariPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -76,7 +78,8 @@ import { LocalNotifyService, CalendarNotifyService, AppNotifyService } from './p
     InstrumenteCalculatorVenitPage,
     InstrumenteCalculatorTaxaAutoPage,
     InstrumenteCalculatorTvaPage,
-    SampleCalendarPage
+    SampleCalendarPage,
+    SampleNotificariPage
   ]
 })
 export class AppModule {
