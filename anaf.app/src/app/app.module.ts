@@ -16,6 +16,7 @@ import {
   InstrumenteCalculatorTvaPage,
   RssFeedComponent,
   RssFeedItemComponent,
+  AlertsComponent,
   SampleCalendarPage,
   SampleNotificariPage
 } from './pages/index';
@@ -45,6 +46,7 @@ import { LocalNotifyService, CalendarNotifyService, AppNotifyService } from './p
     InstrumenteCalculatorTvaPage,
     RssFeedComponent,
     RssFeedItemComponent,
+    AlertsComponent,
     SampleCalendarPage,
     SampleNotificariPage
   ],

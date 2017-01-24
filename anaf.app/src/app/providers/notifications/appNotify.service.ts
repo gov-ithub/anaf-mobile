@@ -3,7 +3,7 @@ import { LocalNotifications } from 'ionic-native';
 import { LoggerService } from './../../shared/logger.service';
 import { INotify } from './notify.interface';
 import { Storage } from '@ionic/storage';
-import { NotificationItem, NotificationList } from './../../models';
+import { NotificationItem, NotificationList, IRssFeed } from './../../models';
 
 @Injectable()
 export class AppNotifyService implements INotify {
@@ -25,10 +25,10 @@ export class AppNotifyService implements INotify {
     });
   }
 
-  public schedule(title: string, startDate: Date) {
+  public schedule(title: string, startDate: Date, rssFeed?: IRssFeed) {
     return new Promise<boolean>(resolve => {
       this.getList().then((notifyList) => {
-        notifyList.list = notifyList.list.concat(new NotificationItem(title, startDate));
+        notifyList.list = notifyList.list.concat(new NotificationItem(title, startDate, rssFeed));
         this.storage.set(this.KEY, notifyList).then(() => {
           this.log.debug("notification scheduled ");
           resolve(true);

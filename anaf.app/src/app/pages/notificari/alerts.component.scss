@@ -1,0 +1,33 @@
+﻿alerts {
+    .modifica {
+        float: right;
+    }
+
+    .data {
+        float: left;
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+
+    .list {
+        .list-header {
+            border: none;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+        .item-block {
+            border-bottom: none;
+            border-top: 1px solid map-get($colors, dividers);
+            .item-inner {
+                border: none;
+                .label {
+                    margin-top: 0px;
+                }
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}

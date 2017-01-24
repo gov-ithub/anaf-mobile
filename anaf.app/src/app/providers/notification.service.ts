@@ -3,7 +3,7 @@ import { Platform } from 'ionic-angular';
 import { LoggerService } from './../shared/logger.service';
 import { INotify } from './notifications/notify.interface';
 import { LocalNotifyService, CalendarNotifyService, AppNotifyService } from './notifications';
-import { NotificationList } from './../models';
+import { NotificationList, IRssFeed } from './../models';
 
 /**
   * Notification Service
@@ -20,18 +20,18 @@ export class NotificationService {
     private appNotify: AppNotifyService) {
   }
 
-  public createNotification(title: string, startDate: Date) {
+  public createNotification(title: string, startDate: Date, rssFeed?: IRssFeed) {
     this.log.debug("NotificationService.createNotification");
     return new Promise<boolean>(resolve => {
-      this.schedule(this.localNotify, title, startDate);
-      this.schedule(this.calendarNotify, title, startDate);
-      this.schedule(this.appNotify, title, startDate);
+      this.schedule(this.localNotify, title, startDate, rssFeed);
+      this.schedule(this.calendarNotify, title, startDate, rssFeed);
+      this.schedule(this.appNotify, title, startDate, rssFeed);
       resolve(true);
     });
   }
 
-  private schedule(notifService: INotify, title: string, startDate: Date): void {
-    notifService.schedule(title, startDate);
+  private schedule(notifService: INotify, title: string, startDate: Date, rssFeed?: IRssFeed): void {
+    notifService.schedule(title, startDate, rssFeed);
   }
 
   public getList() {

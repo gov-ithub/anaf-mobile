@@ -1,0 +1,22 @@
+﻿<ion-list>
+	<ion-list-header>
+		Alertele mele
+	</ion-list-header>
+	<ion-item *ngFor="let item of items.list">
+		<p>
+			<button ion-button color="secondaryText" clear icon-left small class="data">
+				<ion-icon [name]="item.date != null ? 'ic-notificare-on':'ic-notificare-off'"></ion-icon>
+				{{ item.date | date: "dd.MM.yyyy HH:mm" }}
+			</button>
+			<button ion-button color="secondaryText" clear icon-left small class="modifica">
+				<ion-icon name="ic-creion"></ion-icon>
+				Modifica
+			</button>
+		</p>
+		<p>
+			{{item.title}}
+		</p>
+	</ion-item>
+	<ion-item *ngIf="items.list==undefined || items.list.length==0">Nu exista alerte</ion-item>
+</ion-list>
+ 

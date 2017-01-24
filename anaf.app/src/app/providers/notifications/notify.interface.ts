@@ -1,4 +1,4 @@
-﻿import { NotificationList } from './../../models';
+﻿import { NotificationList, IRssFeed } from './../../models';
 
 /**
  * Interface for Notify Services
@@ -18,7 +18,7 @@ export interface INotify {
     * @param title event title
     * @param startDate start date for event
     */
-  schedule(title: string, startDate: Date): Promise<boolean>;
+  schedule(title: string, startDate: Date, rssFeed?: IRssFeed): Promise<boolean>;
 
   getList(): Promise<NotificationList>;
 }
