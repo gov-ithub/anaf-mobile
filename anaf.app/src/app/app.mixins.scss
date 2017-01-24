@@ -1,6 +1,6 @@
 ﻿$anaf-icons: asistenta;
 
-@mixin anaf-icon($name, $content, $content-outline: $content) {
+@mixin anaf-icon-menu($name, $content, $content-outline: $content) {
 
     .tabs-md, .tabs-ios, .tabs-wp {
         .tab-button {
@@ -16,5 +16,12 @@
                 content: $content-outline;
             }
         }
+    }
+}
+
+@mixin anaf-icon($name, $content) {
+    .ion-ios-ic-#{$name}:before,
+    .ion-md-ic-#{$name}:before {
+        content: $content;
     }
 }
