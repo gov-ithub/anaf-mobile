@@ -1,23 +1,5 @@
-/**
- * Interface for groupt RSS channels
- * 
- * @export
- * @interface IRssChannelGroup
- */
 export interface IRssChannelGroup{
-    /**
-     * Group name
-     * 
-     * @type {string}
-     * @memberOf IRssChannelGroup
-     */
     name: string;
-    /**
-     * Group description
-     * 
-     * @type {string}
-     * @memberOf IRssChannelGroup
-     */
     description: string;
 }
 
@@ -43,4 +25,12 @@ export class RssChannelGroup implements IRssChannelGroup{
      * @memberOf RssChannelGroup
      */
     description:string;
+
+    equals(channel:RssChannelGroup):Boolean{
+        if(this.description==channel.description && this.name == channel.name){
+            return true;
+        } else{
+            return false;
+        }
+    }
 }

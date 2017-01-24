@@ -1,7 +1,4 @@
-<ion-item>
-    <ion-avatar item-left>
-        {{feedItem.pubDate}}
-    </ion-avatar>
-    <h2> {{feedItem.title}}</h2>
-    <p>{{feedItem.description}}</p>
-</ion-item>
+<button ion-item text-wrap (click)="openBrowser(feedItem.link)">
+    {{feedItem.title}}<br>
+    {{feedItem.description}} / {{feedItem.pubDate | date:'dd.MM.yyyy'}}
+</button>
