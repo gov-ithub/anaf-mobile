@@ -17,7 +17,7 @@ export class InfoPage implements OnInit {
 
     this.listItems = new Array<IRssCategoryListItem>();
     this.listItems.push(new RssCategoryListItem(this.listItems.length, "Anunturi", { filterBy: "channelGroups", filterValue: ["ACHIZITII", "ACTE", "CONCURSURI", "INTERESGEN"] }));
-    this.listItems.push(new RssCategoryListItem(this.listItems.length, "Calendar obligatii fiscale", {filterBy:"channelGroup",filterValue:{name:"OBLIGATII_FISCALE",description:"Calendar obligatii fiscale"}}));
+    this.listItems.push(new RssCategoryListItem(this.listItems.length, "Calendar obligatii fiscale", {filterBy:"tag",filterValue:"CALENDAR_OBLIGATII_FISCALE_IAN"}));
     this.listItems.push(new RssCategoryListItem(this.listItems.length, "Comunicate de presa", {filterBy:"channelGroup", filterValue:{name: "COMUNICATE_PRESA",description: "Comunicate de presa"}}));
     this.listItems.push(new RssCategoryListItem(this.listItems.length, "Noutati legislative", {filterBy:"tag",filterValue:"NOUTATI_LEGISLATIVE"}));
     this.listItems.push(new RssCategoryListItem(this.listItems.length, "Valorificare bunuri", {filterBy:"channelGroups",filterValue:["BUNURI_STAT","BUNURI_SECHESTRATE","BUNURI_SECHESTRATE_VANZARE_DIRECTA"]}));

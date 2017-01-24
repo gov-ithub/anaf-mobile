@@ -374,123 +374,123 @@ export const RSS_CHANNEL_LIST: RssChannels = {
     {
         tag: "CALENDAR_OBLIGATII_FISCALE_IAN",
         title: "Calendar obligatii fiscale",
-        description: "Ianuarie",
+        description: "Calendar obligatii fiscale",
         link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
         channelGroup: {
             name: "OBLIGATII_FISCALE",
             description: "Calendar obligatii fiscale"
         }
     },
-    {
-        tag: "CALENDAR_OBLIGATII_FISCALE_FEB",
-        title: "Calendar obligatii fiscale",
-        description: "Februarie",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
-        channelGroup: {
-            name: "OBLIGATII_FISCALE",
-            description: "Calendar obligatii fiscale"
-        }
-    },
-    {
-        tag: "CALENDAR_OBLIGATII_FISCALE_MAR",
-        title: "Calendar obligatii fiscale",
-        description: "Martie",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
-        channelGroup: {
-            name: "OBLIGATII_FISCALE",
-            description: "Calendar obligatii fiscale"
-        }
-    },
-    {
-        tag: "CALENDAR_OBLIGATII_FISCALE_APR",
-        title: "Calendar obligatii fiscale",
-        description: "Aprilie",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
-        channelGroup: {
-            name: "OBLIGATII_FISCALE",
-            description: "Calendar obligatii fiscale"
-        }
-    },
-    {
-        tag: "CALENDAR_OBLIGATII_FISCALE_MAI",
-        title: "Calendar obligatii fiscale",
-        description: "Mai",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
-        channelGroup: {
-            name: "OBLIGATII_FISCALE",
-            description: "Calendar obligatii fiscale"
-        }
-    },
-    {
-        tag: "CALENDAR_OBLIGATII_FISCALE_IUN",
-        title: "Calendar obligatii fiscale",
-        description: "Iunie",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
-        channelGroup: {
-            name: "OBLIGATII_FISCALE",
-            description: "Calendar obligatii fiscale"
-        }
-    },
-    {
-        tag: "CALENDAR_OBLIGATII_FISCALE_IUL",
-        title: "Calendar obligatii fiscale",
-        description: "Iulie",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
-        channelGroup: {
-            name: "OBLIGATII_FISCALE",
-            description: "Calendar obligatii fiscale"
-        }
-    },
-    {
-        tag: "CALENDAR_OBLIGATII_FISCALE_AUG",
-        title: "Calendar obligatii fiscale",
-        description: "August",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
-        channelGroup: {
-            name: "OBLIGATII_FISCALE",
-            description: "Calendar obligatii fiscale"
-        }
-    },
-    {
-        tag: "CALENDAR_OBLIGATII_FISCALE_SEP",
-        title: "Calendar obligatii fiscale",
-        description: "Septembrie",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
-        channelGroup: {
-            name: "OBLIGATII_FISCALE",
-            description: "Calendar obligatii fiscale"
-        }
-    },
-    {
-        tag: "CALENDAR_OBLIGATII_FISCALE_OCT",
-        title: "Calendar obligatii fiscale",
-        description: "Octombrie",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
-        channelGroup: {
-            name: "OBLIGATII_FISCALE",
-            description: "Calendar obligatii fiscale"
-        }
-    },
-    {
-        tag: "CALENDAR_OBLIGATII_FISCALE_NOV",
-        title: "Calendar obligatii fiscale",
-        description: "Noiembrie",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
-        channelGroup: {
-            name: "OBLIGATII_FISCALE",
-            description: "Calendar obligatii fiscale"
-        }
-    },
-    {
-        tag: "CALENDAR_OBLIGATII_FISCALE_DEC",
-        title: "Calendar obligatii fiscale",
-        description: "Decembrie",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
-        channelGroup: {
-            name: "OBLIGATII_FISCALE",
-            description: "Calendar obligatii fiscale"
-        }
-    },
+    // { TODO: to be used when we will have different RSS feeds for each month
+    //     tag: "CALENDAR_OBLIGATII_FISCALE_FEB",
+    //     title: "Calendar obligatii fiscale",
+    //     description: "Februarie",
+    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     channelGroup: {
+    //         name: "OBLIGATII_FISCALE",
+    //         description: "Calendar obligatii fiscale"
+    //     }
+    // },
+    // {
+    //     tag: "CALENDAR_OBLIGATII_FISCALE_MAR",
+    //     title: "Calendar obligatii fiscale",
+    //     description: "Martie",
+    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     channelGroup: {
+    //         name: "OBLIGATII_FISCALE",
+    //         description: "Calendar obligatii fiscale"
+    //     }
+    // },
+    // {
+    //     tag: "CALENDAR_OBLIGATII_FISCALE_APR",
+    //     title: "Calendar obligatii fiscale",
+    //     description: "Aprilie",
+    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     channelGroup: {
+    //         name: "OBLIGATII_FISCALE",
+    //         description: "Calendar obligatii fiscale"
+    //     }
+    // },
+    // {
+    //     tag: "CALENDAR_OBLIGATII_FISCALE_MAI",
+    //     title: "Calendar obligatii fiscale",
+    //     description: "Mai",
+    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     channelGroup: {
+    //         name: "OBLIGATII_FISCALE",
+    //         description: "Calendar obligatii fiscale"
+    //     }
+    // },
+    // {
+    //     tag: "CALENDAR_OBLIGATII_FISCALE_IUN",
+    //     title: "Calendar obligatii fiscale",
+    //     description: "Iunie",
+    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     channelGroup: {
+    //         name: "OBLIGATII_FISCALE",
+    //         description: "Calendar obligatii fiscale"
+    //     }
+    // },
+    // {
+    //     tag: "CALENDAR_OBLIGATII_FISCALE_IUL",
+    //     title: "Calendar obligatii fiscale",
+    //     description: "Iulie",
+    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     channelGroup: {
+    //         name: "OBLIGATII_FISCALE",
+    //         description: "Calendar obligatii fiscale"
+    //     }
+    // },
+    // {
+    //     tag: "CALENDAR_OBLIGATII_FISCALE_AUG",
+    //     title: "Calendar obligatii fiscale",
+    //     description: "August",
+    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     channelGroup: {
+    //         name: "OBLIGATII_FISCALE",
+    //         description: "Calendar obligatii fiscale"
+    //     }
+    // },
+    // {
+    //     tag: "CALENDAR_OBLIGATII_FISCALE_SEP",
+    //     title: "Calendar obligatii fiscale",
+    //     description: "Septembrie",
+    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     channelGroup: {
+    //         name: "OBLIGATII_FISCALE",
+    //         description: "Calendar obligatii fiscale"
+    //     }
+    // },
+    // {
+    //     tag: "CALENDAR_OBLIGATII_FISCALE_OCT",
+    //     title: "Calendar obligatii fiscale",
+    //     description: "Octombrie",
+    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     channelGroup: {
+    //         name: "OBLIGATII_FISCALE",
+    //         description: "Calendar obligatii fiscale"
+    //     }
+    // },
+    // {
+    //     tag: "CALENDAR_OBLIGATII_FISCALE_NOV",
+    //     title: "Calendar obligatii fiscale",
+    //     description: "Noiembrie",
+    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     channelGroup: {
+    //         name: "OBLIGATII_FISCALE",
+    //         description: "Calendar obligatii fiscale"
+    //     }
+    // },
+    // {
+    //     tag: "CALENDAR_OBLIGATII_FISCALE_DEC",
+    //     title: "Calendar obligatii fiscale",
+    //     description: "Decembrie",
+    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     channelGroup: {
+    //         name: "OBLIGATII_FISCALE",
+    //         description: "Calendar obligatii fiscale"
+    //     }
+    // },
     { //Comunicate de presa
         tag: "COMUNICATE_PRESA_ANAF",
         title: "Comunicate de presa",
