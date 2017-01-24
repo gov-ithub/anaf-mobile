@@ -23,7 +23,7 @@ export class TablouPage implements OnInit {
     this.items = new NotificationList();
   }
 
-  ionViewDidLoad() {
+  ionViewWillEnter() {
     this.notif.getList().then((list) => {
       this.items = list;
     });
