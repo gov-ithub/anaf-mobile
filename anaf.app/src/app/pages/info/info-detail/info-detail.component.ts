@@ -3,6 +3,13 @@ import { NavController, NavParams } from 'ionic-angular';
 import { RssService } from '../../../providers/rss.service';
 import { IRssCategoryListItem, RssCategoryListItem, IRssChannel } from '../../../models/index';
 
+/**
+ * Subcategory page for rss list item
+ * 
+ * @export
+ * @class InfoDetailPage
+ * @implements {OnInit}
+ */
 @Component({
     selector: 'info-page-detail',
     templateUrl: 'info-detail.component.html',
@@ -14,6 +21,15 @@ export class InfoDetailPage implements OnInit {
     private listName: string;
     private rssChannel:IRssChannel;
 
+    /**
+     * Creates an instance of InfoDetailPage.
+     * 
+     * @param {NavController} navCtrl
+     * @param {NavParams} options
+     * @param {RssService} rss
+     * 
+     * @memberOf InfoDetailPage
+     */
     constructor(private navCtrl: NavController, private options: NavParams, private rss: RssService) {
         let parentSelectedItem = <IRssCategoryListItem>this.options.get("options");
         this.listName = parentSelectedItem.name;
@@ -23,9 +39,22 @@ export class InfoDetailPage implements OnInit {
 
     }
 
+    /**
+     * 
+     * 
+     * 
+     * @memberOf InfoDetailPage
+     */
     ngOnInit() {
     }
 
+    /**
+     * Event listener for the click events emmited from rss-feed-category-list. 
+     * 
+     * @param {any} event
+     * 
+     * @memberOf InfoDetailPage
+     */
     itemSelectedListener(event): void {
 
         let listItem = this.listItems[event.value];
@@ -33,7 +62,16 @@ export class InfoDetailPage implements OnInit {
     }
 
 
-
+    
+    /**
+     * Prepares the data for rss-feed-category-list Array<RssCategoryListItem>
+     * 
+     * @private
+     * @param {string} filterBy 
+     * @param {*} filterValue
+     * 
+     * @memberOf InfoDetailPage
+     */
     private prepareList(filterBy: string, filterValue: any) {
 
         switch (filterBy) {

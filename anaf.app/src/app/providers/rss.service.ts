@@ -35,10 +35,54 @@ export class RssService {
     }
 
 
+
+    /**
+     * Returns all rss channles
+     * 
+     * @returns {Observable<Array<RssChannel>>}
+     * 
+     * @memberOf RssService
+     */
     public getChannelList(): Observable<Array<RssChannel>>;
+    /**
+     * Returns rss channels filtered by a channel group
+     * 
+     * @param {string} [filterBy] should have the value "channelGroup"
+     * @param {RssChannelGroup} [filterValue]
+     * @returns {Observable<Array<RssChannel>>}
+     * 
+     * @memberOf RssService
+     */
     public getChannelList(filterBy?: string, filterValue?: RssChannelGroup): Observable<Array<RssChannel>>;
+    /**
+     * Returns rss channels filtered by tags/names/description
+     * 
+     * @param {string} [filterBy] should have the value "channelGroup"
+     * @param {string} [filerValue]
+     * @returns {Observable<Array<RssChannel>>}
+     * 
+     * @memberOf RssService
+     */
     public getChannelList(filterBy?: string, filerValue?: string): Observable<Array<RssChannel>>;
+    /**
+     * Returns rss channels filterd by an Array of tags/names/description
+     * 
+     * @param {string} [filterBy]
+     * @param {Array<string>} [filerValue]
+     * @returns {Observable<Array<RssChannel>>}
+     * 
+     * @memberOf RssService
+     */
     public getChannelList(filterBy?: string, filerValue?: Array<string>): Observable<Array<RssChannel>>;
+    /**
+     * Returns rss channels filterd by an Array of channel groups
+     * 
+     * @param {string} [filterBy]
+     * @param {Array<RssChannelGroup>} [filerValue]
+     * @returns {Observable<Array<RssChannel>>}
+     * 
+     * @memberOf RssService
+     */
     public getChannelList(filterBy?: string, filerValue?: Array<RssChannelGroup>): Observable<Array<RssChannel>>;
 
 
@@ -153,8 +197,33 @@ export class RssService {
         return channel;
     }
 
+    /**
+     * Returns an Array of unique channel groups
+     * 
+     * @returns {Observable<Array<RssChannelGroup>>}
+     * 
+     * @memberOf RssService
+     */
     public getRssChannelGroups(): Observable<Array<RssChannelGroup>>;
+    /**
+     * Returns an Array of unique channel groups filtered by name/description
+     * 
+     * @param {string} filterBy
+     * @param {string} filterValue
+     * @returns {Observable<Array<RssChannelGroup>>}
+     * 
+     * @memberOf RssService
+     */
     public getRssChannelGroups(filterBy: string, filterValue: string): Observable<Array<RssChannelGroup>>;
+    /**
+     * Returns an Array of unique channel groups filtered by an array of name/description 
+     * 
+     * @param {string} filterBy
+     * @param {Array<string>} filterValue
+     * @returns {Observable<Array<RssChannelGroup>>}
+     * 
+     * @memberOf RssService
+     */
     public getRssChannelGroups(filterBy: string, filterValue: Array<string>): Observable<Array<RssChannelGroup>>;
 
     getRssChannelGroups(filterBy?: string, filterValue?: any): Observable<Array<RssChannelGroup>> {
@@ -198,6 +267,14 @@ export class RssService {
         return channelGroups;
     }
 
+    /**
+     * Returns a channel group based on name 
+     * 
+     * @param {string} name
+     * @returns {Observable<RssChannelGroup>}
+     * 
+     * @memberOf RssService
+     */
     getRssChannelGroup(name: string): Observable<RssChannelGroup> {
         let result = new RssChannelGroup();
         let channelGroup = new Observable(observer => {

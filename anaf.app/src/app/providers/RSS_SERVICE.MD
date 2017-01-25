@@ -2,8 +2,9 @@
 
 Serviciu care indeplineste urmatoarele functionalitati:
 - citeste din fisierul de configurare lista de canale RSS
-- cauta in lista de servicii RSS un canal anume
+- cauta in lista de servicii RSS un canal anume sau returneaza toate canalele care indeplinesc anumite criterii (nume,tag, description, channelGroup)
 - citeste feed-ul RSS aferent unui canal si il converteste intr-un obiect JSON
+- returneaza lista unica de grupuri de canale
 
 ## Instalare
 

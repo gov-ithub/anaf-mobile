@@ -3,6 +3,13 @@ import { NavController } from 'ionic-angular';
 import { InfoDetailPage } from './info-detail/info-detail.component';
 import { IRssCategoryListItem, RssCategoryListItem } from '../../models/index';
 
+/**
+ * Master page for info tab
+ * 
+ * @export
+ * @class InfoPage
+ * @implements {OnInit}
+ */
 @Component({
   selector: 'page-notificari',
   templateUrl: 'info.component.html'
@@ -11,6 +18,13 @@ export class InfoPage implements OnInit {
 
   private listItems: Array<IRssCategoryListItem>;
   private listName: string;
+  /**
+   * Creates an instance of InfoPage.
+   * 
+   * @param {NavController} navCtrl
+   * 
+   * @memberOf InfoPage
+   */
   constructor(private navCtrl: NavController) {
 
     this.listName = "Info";
@@ -25,16 +39,39 @@ export class InfoPage implements OnInit {
 
   }
 
+  /**
+   * 
+   * 
+   * 
+   * @memberOf InfoPage
+   */
   ngOnInit() {
 
 
   }
 
+  /**
+   * Event listener for click events from rss-feed-category-list
+   * 
+   * @param {any} event
+   * 
+   * @memberOf InfoPage
+   */
   itemSelectedListener(event) {
     let listItem = this.listItems[event.value];
     this.updateListItems(listItem);
   }
 
+
+
+  /**
+   * Creates a new instance of info-detail component
+   * 
+   * @private
+   * @param {IRssCategoryListItem} selectedItem
+   * 
+   * @memberOf InfoPage
+   */
   private updateListItems(selectedItem: IRssCategoryListItem): void {
 
     this.navCtrl.push(InfoDetailPage, { options: selectedItem });
