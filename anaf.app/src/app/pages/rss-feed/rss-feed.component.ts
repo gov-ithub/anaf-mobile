@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IRssChannel, IRssFeed, RssFeed, RssChannel } from '../../models/index';
+import { RssFeed, RssChannel } from '../../models/index';
 import { RssService } from '../../providers/rss.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { RssService } from '../../providers/rss.service';
 export class RssFeedComponent implements OnInit {
 
     @Input() channel: RssChannel;
-    private rssFeed: IRssFeed;
+    private rssFeed: RssFeed;
     private error: any;
 
     constructor(private rss: RssService) {
@@ -26,7 +26,7 @@ export class RssFeedComponent implements OnInit {
         }
     }
 
-    public getRssFeed(rssChannel: IRssChannel): void {
+    public getRssFeed(rssChannel: RssChannel): void {
         this.rss.getRssFeed(rssChannel).subscribe(rssFeed => {
             this.rssFeed = rssFeed;
         }, error => {

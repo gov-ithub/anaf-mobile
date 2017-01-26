@@ -14,8 +14,10 @@ import {
     InstrumenteCalculatorVenitPage,
     InstrumenteCalculatorTaxaAutoPage,
     InstrumenteCalculatorTvaPage,
+    InfoDetailPage,
     RssFeedComponent,
-    RssFeedItemComponent
+    RssFeedItemComponent,
+    RssCategoryListComponent
 } from './pages/index';
 import { RssService } from './providers/rss.service';
 import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST } from './shared/config';
@@ -36,8 +38,10 @@ import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST } from './shared/config';
         InstrumenteCalculatorVenitPage,
         InstrumenteCalculatorTaxaAutoPage,
         InstrumenteCalculatorTvaPage,
+        InfoDetailPage,
         RssFeedComponent,
-        RssFeedItemComponent
+        RssFeedItemComponent,
+        RssCategoryListComponent
     ],
     imports: [
         IonicModule.forRoot(MyApp)
@@ -60,7 +64,8 @@ import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST } from './shared/config';
         InstrumenteVerificareCifPage,
         InstrumenteCalculatorVenitPage,
         InstrumenteCalculatorTaxaAutoPage,
-        InstrumenteCalculatorTvaPage
+        InstrumenteCalculatorTvaPage,
+        InfoDetailPage
     ]
 })
 export class AppModule {

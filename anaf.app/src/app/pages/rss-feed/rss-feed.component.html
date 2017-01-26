@@ -1,10 +1,7 @@
 <ion-list *ngIf="channel">
-    <ion-list-header>
-        {{channel.title}}
-    </ion-list-header>
     <div *ngIf="rssFeed">
         <rss-feed-item *ngFor="let item of rssFeed.feed" [feedItem]="item">
         </rss-feed-item>
     </div>
-    <ion-item *ngIf="rssFeed.feed==undefined || rssFeed.feed.length==0">Nu exista anunturi</ion-item>1
+    <ion-item *ngIf="rssFeed.feed==undefined || rssFeed.feed.length==0">Nu exista anunturi</ion-item>
 </ion-list>

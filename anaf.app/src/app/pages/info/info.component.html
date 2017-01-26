@@ -1,12 +1,14 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Info</ion-title>
+    <ion-title>{{listName}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <rss-channel-category [listName]="listName" [listItems]="listItems" (itemSelectedEvent)="itemSelectedListener($event)"></rss-channel-category>
 
 </ion-content>

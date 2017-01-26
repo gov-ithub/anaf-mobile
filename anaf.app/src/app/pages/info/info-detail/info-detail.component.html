@@ -1,0 +1,11 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{listName}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<rss-channel-category *ngIf="!rssChannel" [listName]="listName" [listItems]="listItems" (itemSelectedEvent)="itemSelectedListener($event)"></rss-channel-category>
+<rss-feed *ngIf="rssChannel" [channel]="rssChannel"></rss-feed>
+</ion-content>
