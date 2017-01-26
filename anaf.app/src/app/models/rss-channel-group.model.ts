@@ -1,19 +1,19 @@
 /**
- * Interface for groupt RSS channels
+ * Model for channel group. Should be used to group rss channels
  * 
  * @export
  * @interface IRssChannelGroup
  */
 export interface IRssChannelGroup{
     /**
-     * Group name
+     * Name used as a key for business logic operations
      * 
      * @type {string}
      * @memberOf IRssChannelGroup
      */
     name: string;
     /**
-     * Group description
+     * Display information for the user
      * 
      * @type {string}
      * @memberOf IRssChannelGroup
@@ -43,4 +43,20 @@ export class RssChannelGroup implements IRssChannelGroup{
      * @memberOf RssChannelGroup
      */
     description:string;
+
+    /**
+     * Checks if the given instance is equal to the current instance
+     * 
+     * @param {RssChannelGroup} channel
+     * @returns {Boolean}
+     * 
+     * @memberOf RssChannelGroup
+     */
+    equals(channel:RssChannelGroup):Boolean{
+        if(this.description==channel.description && this.name == channel.name){
+            return true;
+        } else{
+            return false;
+        }
+    }
 }

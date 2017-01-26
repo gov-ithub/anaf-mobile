@@ -27,7 +27,7 @@ export interface IRssFeed{
 }
 
 /**
- * 
+ * Standard implementation for IRssFeed
  * 
  * @export
  * @class RssFeed

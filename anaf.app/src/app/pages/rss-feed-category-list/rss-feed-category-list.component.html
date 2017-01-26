@@ -1,0 +1,8 @@
+<ion-list *ngIf="listItems.length>0">
+    <button ion-item text-wrap *ngFor="let item of listItems" (click)="itemSelected(item.id)">{{item.name}} </button>
+</ion-list>
+
+
+<ion-list *ngIf="listItems.length==0">
+    <ion-item>Nu exista categorii</ion-item>
+</ion-list>
