@@ -14,14 +14,16 @@ import {
   InstrumenteCalculatorVenitPage,
   InstrumenteCalculatorTaxaAutoPage,
   InstrumenteCalculatorTvaPage,
-  RssFeedComponent,
-  RssFeedItemComponent,
   AlertsComponent,
   SampleCalendarPage,
-  SampleNotificariPage
+  SampleNotificariPage,
+  InfoDetailPage,
+  RssFeedComponent,
+  RssFeedItemComponent,
+  RssCategoryListComponent
 } from './pages/index';
 import { RssService } from './providers/rss.service';
-import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST } from './shared/config';
+import { RSS_CHANNEL_LIST_TOKEN, RSS_CHANNEL_LIST, CONFIG_TOKEN, Config } from './shared/config';
 import { LoggerService } from './shared/logger.service';
 import { Logger } from 'angular2-logger/core';
 import { NotificationService } from './providers/notification.service';
@@ -48,7 +50,11 @@ import { LocalNotifyService, CalendarNotifyService, AppNotifyService } from './p
     RssFeedItemComponent,
     AlertsComponent,
     SampleCalendarPage,
-    SampleNotificariPage
+    SampleNotificariPage,
+    InfoDetailPage,
+    RssFeedComponent,
+    RssFeedItemComponent,
+    RssCategoryListComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -59,6 +65,7 @@ import { LocalNotifyService, CalendarNotifyService, AppNotifyService } from './p
     RssService,
     //required for RSS Channel List configuration
     { provide: RSS_CHANNEL_LIST_TOKEN, useValue: RSS_CHANNEL_LIST },
+    { provide: CONFIG_TOKEN, useValue: Config},
     Logger,
     LoggerService,
     LocalNotifyService,
@@ -81,7 +88,8 @@ import { LocalNotifyService, CalendarNotifyService, AppNotifyService } from './p
     InstrumenteCalculatorTaxaAutoPage,
     InstrumenteCalculatorTvaPage,
     SampleCalendarPage,
-    SampleNotificariPage
+    SampleNotificariPage,
+    InfoDetailPage
   ]
 })
 export class AppModule {

@@ -25,7 +25,7 @@ export class RssFeedItemComponent implements OnInit {
 
         this.platform.ready().then(() => {
             let options = 'location=no,toolbar=yes,hidden=no';
-            let browser = new InAppBrowser(url, "_blank", options);
+            let browser = new InAppBrowser(url, "_system", options);
             browser.show();
         });
      

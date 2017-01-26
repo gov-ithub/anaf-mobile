@@ -15,3 +15,5 @@ export * from './rss-feed-item/rss-feed-item.component';
 export * from './notificari/alerts.component';
 export * from './samples/calendar.component';
 export * from './samples/notificari.component'; 
+export * from './info/info-detail/info-detail.component';
+export * from './rss-feed-category-list/rss-feed-category-list.component';

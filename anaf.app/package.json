@@ -40,6 +40,7 @@
         "cordova-plugin-calendar",
         "de.appplant.cordova.plugin.local-notification",
         "cordova-sqlite-storage",
+        "cordova-plugin-inappbrowser",
         "ionic-plugin-keyboard"
     ],
     "cordovaPlatforms": [],

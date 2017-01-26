@@ -1,6 +1,12 @@
 {
   "name": "anaf.mobile",
-  "app_id": "",
+  "app_id": "b677e9eb",
   "v2": true,
-  "typescript": true
+  "typescript": true,
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://www.anaf.ro"
+    }
+  ]
 }

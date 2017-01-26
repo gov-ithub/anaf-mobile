@@ -3,7 +3,7 @@ import { Http, Response, Headers } from '@angular/http';
 import '../rxjs-operators';
 import { Observable } from 'rxjs/Observable';
 import { RssChannels, RssChannel, RssFeed, RssFeedItem, RssChannelGroup } from '../models/index';
-import { RSS_CHANNEL_LIST_TOKEN } from '../shared/config';
+import { RSS_CHANNEL_LIST_TOKEN, CONFIG_TOKEN, IConfig } from '../shared/config';
 
 /**
  * External library required for XML to JSON parsing
@@ -28,10 +28,11 @@ export class RssService {
      * 
      * @param {Http} http
      * @param {RssChannels} rss_channel_list
+     * @param {Config} config
      * 
      * @memberOf RssService
      */
-    constructor(private http: Http, @Inject(RSS_CHANNEL_LIST_TOKEN) private rss_channel_list: RssChannels) {
+    constructor(private http: Http, @Inject(RSS_CHANNEL_LIST_TOKEN) private rss_channel_list: RssChannels, @Inject(CONFIG_TOKEN) private config: IConfig) {
     }
 
 
@@ -307,7 +308,7 @@ export class RssService {
 
         headers.append('Accept', 'application/xml');
 
-        return this.http.get(channel.link, { headers: headers })
+        return this.http.get(this.config.url + channel.link, { headers: headers })
             .map(response => {
                 return this.convertToJson(response, channel);
             })
