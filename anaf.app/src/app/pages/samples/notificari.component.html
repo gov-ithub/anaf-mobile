@@ -1,0 +1,14 @@
+﻿<ion-header>
+	<ion-navbar>
+		<ion-title>Notificari</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	test
+	<div *ngIf="items">
+		<div *ngFor="let item of items.list">
+			<div>{{ item.title }} - {{ item.date }}</div>
+		</div>
+	</div>
+</ion-content>

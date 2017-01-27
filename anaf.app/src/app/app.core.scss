@@ -14,8 +14,6 @@
 // By default each design mode includes these shared imports.
 // App Shared Sass variables belong in app.variables.scss.
 
-@import "../app/pages/about/about.component";
-
 @import "../app/pages/contact/contact.component";
 
 @import "../app/pages/home/home.component";
@@ -82,4 +80,8 @@
 
 .button-clear-md.button-small {
     text-transform: none;
+}
+
+.list-header-md, .list-header-ios, .list-header-wp {
+    font-size: 20px;
 }

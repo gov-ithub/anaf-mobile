@@ -1,6 +1,18 @@
 import { RssChannels } from '../models/index';
 import { OpaqueToken } from '@angular/core';
 
+export interface IConfig {
+  logLevel: string;
+  url: string;
+}
+
+export const Config : IConfig = {
+  logLevel: 'DEBUG',
+  url: 'http://localhost:8100/api'
+  //url: 'https://anaf.ro'
+}
+
+export const CONFIG_TOKEN = new OpaqueToken('config_mobile');
 /**
  * Configuration for RSS Channel List
  */
@@ -11,7 +23,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACHIZITIE_ANAF",
         title: "Anunturi de achizitie bunuri si servicii",
         description: "Anaf",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=achizBS",
+        link: "/ANAFRSS/?canal=achizBS",
         channelGroup: {
             name: "ACHIZITII",
             description: "Achizitie de bunuri si servicii",
@@ -21,7 +33,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACHIZITIE_BUCURESTI",
         title: "Anunturi de achizitie bunuri si servicii",
         description: "Bucuresti",
-        link: "https://www.anaf.ro/BucurestiRSS/?canal=achizBS",
+        link: "/BucurestiRSS/?canal=achizBS",
         channelGroup: {
             name: "ACHIZITII",
             description: "Achizitie de bunuri si servicii"
@@ -31,7 +43,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACHIZITIE_IASI",
         title: "Anunturi de achizitie bunuri si servicii",
         description: "Iasi",
-        link: "https://www.anaf.ro/IasiRSS/?canal=achizBS",
+        link: "/IasiRSS/?canal=achizBS",
         channelGroup: {
             name: "ACHIZITII",
             description: "Achizitie de bunuri si servicii"
@@ -41,7 +53,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACHIZITIE_GALATI",
         title: "Anunturi de achizitie bunuri si servicii",
         description: "Galati",
-        link: "https://www.anaf.ro/GalatiRSS/?canal=achizBS",
+        link: "/GalatiRSS/?canal=achizBS",
         channelGroup: {
             name: "ACHIZITII",
             description: "Achizitie de bunuri si servicii"
@@ -51,7 +63,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACHIZITIE_PLOIESTI",
         title: "Anunturi de achizitie bunuri si servicii",
         description: "Ploiesti",
-        link: "https://www.anaf.ro/PloiestiRSS/?canal=achizBS",
+        link: "/PloiestiRSS/?canal=achizBS",
         channelGroup: {
             name: "ACHIZITII",
             description: "Achizitie de bunuri si servicii"
@@ -61,7 +73,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACHIZITIE_CRAIOVA",
         title: "Anunturi de achizitie bunuri si servicii",
         description: "Craiova",
-        link: "https://www.anaf.ro/CraiovaRSS/?canal=achizBS",
+        link: "/CraiovaRSS/?canal=achizBS",
         channelGroup: {
             name: "ACHIZITII",
             description: "Achizitie de bunuri si servicii"
@@ -71,7 +83,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACHIZITIE_TIMISOARA",
         title: "Anunturi de achizitie bunuri si servicii",
         description: "Timisoara",
-        link: "https://www.anaf.ro/TimisoaraRSS/?canal=achizBS",
+        link: "/TimisoaraRSS/?canal=achizBS",
         channelGroup: {
             name: "ACHIZITII",
             description: "Achizitie de bunuri si servicii"
@@ -81,7 +93,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACHIZITIE_CLUJ",
         title: "Anunturi de achizitie bunuri si servicii",
         description: "Cluj",
-        link: "https://www.anaf.ro/ClujRSS/?canal=achizBS",
+        link: "/ClujRSS/?canal=achizBS",
         channelGroup: {
             name: "ACHIZITII",
             description: "Achizitie de bunuri si servicii"
@@ -91,7 +103,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACHIZITIE_BRASOV",
         title: "Anunturi de achizitie bunuri si servicii",
         description: "Brasov",
-        link: "https://www.anaf.ro/BrasovRSS/?canal=achizBS",
+        link: "/BrasovRSS/?canal=achizBS",
         channelGroup: {
             name: "ACHIZITII",
             description: "Achizitie de bunuri si servicii"
@@ -102,7 +114,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACTE_ANAF",
         title: "Acte administrative fiscale",
         description: "Anaf",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=acteadministrative",
+        link: "/ANAFRSS/?canal=acteadministrative",
         channelGroup: {
             name: "ACTE",
             description: "Acte administrative fiscale"
@@ -112,7 +124,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACTE_BUCURESTI",
         title: "Acte administrative fiscale",
         description: "Bucuresti",
-        link: "https://www.anaf.ro/BucurestiRSS/?canal=acteadministrative",
+        link: "/BucurestiRSS/?canal=acteadministrative",
         channelGroup: {
             name: "ACTE",
             description: "Acte administrative fiscale"
@@ -122,7 +134,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACTE_IASI",
         title: "Acte administrative fiscale",
         description: "Iasi",
-        link: "https://www.anaf.ro/IasiRSS/?canal=acteadministrative",
+        link: "/IasiRSS/?canal=acteadministrative",
         channelGroup: {
             name: "ACTE",
             description: "Acte administrative fiscale"
@@ -132,7 +144,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACTE_GALATI",
         title: "Acte administrative fiscale",
         description: "Galati",
-        link: "https://www.anaf.ro/GalatiRSS/?canal=acteadministrative",
+        link: "/GalatiRSS/?canal=acteadministrative",
         channelGroup: {
             name: "ACTE",
             description: "Acte administrative fiscale"
@@ -142,7 +154,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACTE_PLOIESTI",
         title: "Acte administrative fiscale",
         description: "Ploiesti",
-        link: "https://www.anaf.ro/PloiestiRSS/?canal=acteadministrative",
+        link: "/PloiestiRSS/?canal=acteadministrative",
         channelGroup: {
             name: "ACTE",
             description: "Acte administrative fiscale"
@@ -152,7 +164,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACTE_CRAIOVA",
         title: "Acte administrative fiscale",
         description: "Craiova",
-        link: "https://www.anaf.ro/CraiovaRSS/?canal=acteadministrative",
+        link: "/CraiovaRSS/?canal=acteadministrative",
         channelGroup: {
             name: "ACTE",
             description: "Acte administrative fiscale"
@@ -162,7 +174,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACTE_TIMISOARA",
         title: "Acte administrative fiscale",
         description: "Timisoara",
-        link: "https://www.anaf.ro/TimisoaraRSS/?canal=acteadministrative",
+        link: "/TimisoaraRSS/?canal=acteadministrative",
         channelGroup: {
             name: "ACTE",
             description: "Acte administrative fiscale"
@@ -172,7 +184,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACTE_CLUJ",
         title: "Acte administrative fiscale",
         description: "Cluj",
-        link: "https://www.anaf.ro/ClujRSS/?canal=acteadministrative",
+        link: "/ClujRSS/?canal=acteadministrative",
         channelGroup: {
             name: "ACTE",
             description: "Acte administrative fiscale"
@@ -182,7 +194,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "ACTE_BRASOV",
         title: "Acte administrative fiscale",
         description: "Brasov",
-        link: "https://www.anaf.ro/BrasovRSS/?canal=acteadministrative",
+        link: "/BrasovRSS/?canal=acteadministrative",
         channelGroup: {
             name: "ACTE",
             description: "Acte administrative fiscale"
@@ -193,7 +205,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "CONCURSURI_ANAF",
         title: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri",
         description: "Anaf",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=concursuri",
+        link: "/ANAFRSS/?canal=concursuri",
         channelGroup: {
             name: "CONCURSURI",
             description: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri"
@@ -203,7 +215,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "CONCURSURI_BUCURESTI",
         title: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri",
         description: "Bucuresti",
-        link: "https://www.anaf.ro/BucurestiRSS/?canal=concursuri",
+        link: "/BucurestiRSS/?canal=concursuri",
         channelGroup: {
             name: "CONCURSURI",
             description: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri"
@@ -213,7 +225,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "CONCURSURI_IASI",
         title: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri",
         description: "Iasi",
-        link: "https://www.anaf.ro/IasiRSS/?canal=cursuri",
+        link: "/IasiRSS/?canal=cursuri",
         channelGroup: {
             name: "CONCURSURI",
             description: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri"
@@ -223,7 +235,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "CONCURSURI_GALATI",
         title: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri",
         description: "Galati",
-        link: "https://www.anaf.ro/GalatiRSS/?canal=concursuri",
+        link: "/GalatiRSS/?canal=concursuri",
         channelGroup: {
             name: "CONCURSURI",
             description: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri"
@@ -233,7 +245,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "CONCURSURI_PLOIESTI",
         title: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri",
         description: "Ploiesti",
-        link: "https://www.anaf.ro/PloiestiRSS/?canal=concursuri",
+        link: "/PloiestiRSS/?canal=concursuri",
         channelGroup: {
             name: "CONCURSURI",
             description: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri"
@@ -243,7 +255,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "CONCURSURI_CRAIOVA",
         title: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri",
         description: "Craiova",
-        link: "https://www.anaf.ro/CraiovaRSS/?canal=concursuri",
+        link: "/CraiovaRSS/?canal=concursuri",
         channelGroup: {
             name: "CONCURSURI",
             description: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri"
@@ -253,7 +265,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "CONCURSURI_TIMISOARA",
         title: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri",
         description: "Timisoara",
-        link: "https://www.anaf.ro/TimisoaraRSS/?canal=concursuri",
+        link: "/TimisoaraRSS/?canal=concursuri",
         channelGroup: {
             name: "CONCURSURI",
             description: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri"
@@ -263,7 +275,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "CONCURSURI_CLUJ",
         title: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri",
         description: "Cluj",
-        link: "https://www.anaf.ro/ClujRSS/?canal=concursuri",
+        link: "/ClujRSS/?canal=concursuri",
         channelGroup: {
             name: "CONCURSURI",
             description: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri"
@@ -273,7 +285,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "CONCURSURI_BRASOV",
         title: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri",
         description: "Brasov",
-        link: "https://www.anaf.ro/BrasovRSS/?canal=concursuri",
+        link: "/BrasovRSS/?canal=concursuri",
         channelGroup: {
             name: "CONCURSURI",
             description: "Executari silite cu dare in plata, Loteria Bonurilor Fiscale, Angajari/Concursuri"
@@ -284,7 +296,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "INTERESGEN_ANAF",
         title: "Anunturi de interes general",
         description: "Anaf",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=interesgen",
+        link: "/ANAFRSS/?canal=interesgen",
         channelGroup: {
             name: "INTERESGEN",
             description: "Anunturi de interes general"
@@ -294,7 +306,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "INTERESGEN_BUCURESTI",
         title: "Anunturi de interes general",
         description: "Bucuresti",
-        link: "https://www.anaf.ro/BucurestiRSS/?canal=interesgen",
+        link: "/BucurestiRSS/?canal=interesgen",
         channelGroup: {
             name: "INTERESGEN",
             description: "Anunturi de interes general"
@@ -304,7 +316,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "INTERESGEN_IASI",
         title: "Anunturi de interes general",
         description: "Iasi",
-        link: "https://www.anaf.ro/IasiRSS/?canal=cursuri",
+        link: "/IasiRSS/?canal=cursuri",
         channelGroup: {
             name: "INTERESGEN",
             description: "Anunturi de interes general"
@@ -314,7 +326,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "INTERESGEN_GALATI",
         title: "Anunturi de interes general",
         description: "Galati",
-        link: "https://www.anaf.ro/GalatiRSS/?canal=interesgen",
+        link: "/GalatiRSS/?canal=interesgen",
         channelGroup: {
             name: "INTERESGEN",
             description: "Anunturi de interes general"
@@ -324,7 +336,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "INTERESGEN_PLOIESTI",
         title: "Anunturi de interes general",
         description: "Ploiesti",
-        link: "https://www.anaf.ro/PloiestiRSS/?canal=interesgen",
+        link: "/PloiestiRSS/?canal=interesgen",
         channelGroup: {
             name: "INTERESGEN",
             description: "Anunturi de interes general"
@@ -334,7 +346,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "INTERESGEN_CRAIOVA",
         title: "Anunturi de interes general",
         description: "Craiova",
-        link: "https://www.anaf.ro/CraiovaRSS/?canal=interesgen",
+        link: "/CraiovaRSS/?canal=interesgen",
         channelGroup: {
             name: "INTERESGEN",
             description: "Anunturi de interes general"
@@ -344,7 +356,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "INTERESGEN_TIMISOARA",
         title: "Anunturi de interes general",
         description: "Timisoara",
-        link: "https://www.anaf.ro/TimisoaraRSS/?canal=interesgen",
+        link: "/TimisoaraRSS/?canal=interesgen",
         channelGroup: {
             name: "INTERESGEN",
             description: "Anunturi de interes general"
@@ -354,7 +366,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "INTERESGEN_CLUJ",
         title: "Anunturi de interes general",
         description: "Cluj",
-        link: "https://www.anaf.ro/ClujRSS/?canal=interesgen",
+        link: "/ClujRSS/?canal=interesgen",
         channelGroup: {
             name: "INTERESGEN",
             description: "Anunturi de interes general"
@@ -364,7 +376,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "INTERESGEN_BRASOV",
         title: "Anunturi de interes general",
         description: "Brasov",
-        link: "https://www.anaf.ro/BrasovRSS/?canal=interesgen",
+        link: "/BrasovRSS/?canal=interesgen",
         channelGroup: {
             name: "INTERESGEN",
             description: "Anunturi de interes general"
@@ -375,7 +387,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "CALENDAR_OBLIGATII_FISCALE_IAN",
         title: "Calendar obligatii fiscale",
         description: "Calendar obligatii fiscale",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+        link: "/ANAFRSS/?canal=calendar",
         channelGroup: {
             name: "OBLIGATII_FISCALE",
             description: "Calendar obligatii fiscale"
@@ -385,7 +397,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
     //     tag: "CALENDAR_OBLIGATII_FISCALE_FEB",
     //     title: "Calendar obligatii fiscale",
     //     description: "Februarie",
-    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     link: "/ANAFRSS/?canal=calendar",
     //     channelGroup: {
     //         name: "OBLIGATII_FISCALE",
     //         description: "Calendar obligatii fiscale"
@@ -395,7 +407,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
     //     tag: "CALENDAR_OBLIGATII_FISCALE_MAR",
     //     title: "Calendar obligatii fiscale",
     //     description: "Martie",
-    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     link: "/ANAFRSS/?canal=calendar",
     //     channelGroup: {
     //         name: "OBLIGATII_FISCALE",
     //         description: "Calendar obligatii fiscale"
@@ -405,7 +417,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
     //     tag: "CALENDAR_OBLIGATII_FISCALE_APR",
     //     title: "Calendar obligatii fiscale",
     //     description: "Aprilie",
-    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     link: "/ANAFRSS/?canal=calendar",
     //     channelGroup: {
     //         name: "OBLIGATII_FISCALE",
     //         description: "Calendar obligatii fiscale"
@@ -415,7 +427,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
     //     tag: "CALENDAR_OBLIGATII_FISCALE_MAI",
     //     title: "Calendar obligatii fiscale",
     //     description: "Mai",
-    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     link: "/ANAFRSS/?canal=calendar",
     //     channelGroup: {
     //         name: "OBLIGATII_FISCALE",
     //         description: "Calendar obligatii fiscale"
@@ -425,7 +437,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
     //     tag: "CALENDAR_OBLIGATII_FISCALE_IUN",
     //     title: "Calendar obligatii fiscale",
     //     description: "Iunie",
-    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     link: "/ANAFRSS/?canal=calendar",
     //     channelGroup: {
     //         name: "OBLIGATII_FISCALE",
     //         description: "Calendar obligatii fiscale"
@@ -435,7 +447,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
     //     tag: "CALENDAR_OBLIGATII_FISCALE_IUL",
     //     title: "Calendar obligatii fiscale",
     //     description: "Iulie",
-    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     link: "/ANAFRSS/?canal=calendar",
     //     channelGroup: {
     //         name: "OBLIGATII_FISCALE",
     //         description: "Calendar obligatii fiscale"
@@ -445,7 +457,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
     //     tag: "CALENDAR_OBLIGATII_FISCALE_AUG",
     //     title: "Calendar obligatii fiscale",
     //     description: "August",
-    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     link: "/ANAFRSS/?canal=calendar",
     //     channelGroup: {
     //         name: "OBLIGATII_FISCALE",
     //         description: "Calendar obligatii fiscale"
@@ -455,7 +467,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
     //     tag: "CALENDAR_OBLIGATII_FISCALE_SEP",
     //     title: "Calendar obligatii fiscale",
     //     description: "Septembrie",
-    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     link: "/ANAFRSS/?canal=calendar",
     //     channelGroup: {
     //         name: "OBLIGATII_FISCALE",
     //         description: "Calendar obligatii fiscale"
@@ -465,7 +477,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
     //     tag: "CALENDAR_OBLIGATII_FISCALE_OCT",
     //     title: "Calendar obligatii fiscale",
     //     description: "Octombrie",
-    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     link: "/ANAFRSS/?canal=calendar",
     //     channelGroup: {
     //         name: "OBLIGATII_FISCALE",
     //         description: "Calendar obligatii fiscale"
@@ -475,7 +487,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
     //     tag: "CALENDAR_OBLIGATII_FISCALE_NOV",
     //     title: "Calendar obligatii fiscale",
     //     description: "Noiembrie",
-    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     link: "/ANAFRSS/?canal=calendar",
     //     channelGroup: {
     //         name: "OBLIGATII_FISCALE",
     //         description: "Calendar obligatii fiscale"
@@ -485,7 +497,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
     //     tag: "CALENDAR_OBLIGATII_FISCALE_DEC",
     //     title: "Calendar obligatii fiscale",
     //     description: "Decembrie",
-    //     link: "https://www.anaf.ro/ANAFRSS/?canal=calendar",
+    //     link: "/ANAFRSS/?canal=calendar",
     //     channelGroup: {
     //         name: "OBLIGATII_FISCALE",
     //         description: "Calendar obligatii fiscale"
@@ -495,7 +507,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "COMUNICATE_PRESA_ANAF",
         title: "Comunicate de presa",
         description: "Anaf",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=comunicate",
+        link: "/ANAFRSS/?canal=comunicate",
         channelGroup: {
             name: "COMUNICATE_PRESA",
             description: "Comunicate de presa"
@@ -505,7 +517,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "COMUNICATE_PRESA_BUCURESTI",
         title: "Comunicate de presa",
         description: "Bucuresti",
-        link: "https://www.anaf.ro/BucurestiRSS/?canal=comunicate",
+        link: "/BucurestiRSS/?canal=comunicate",
         channelGroup: {
             name: "COMUNICATE_PRESA",
             description: "Comunicate de presa"
@@ -515,7 +527,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "COMUNICATE_PRESA_IASI",
         title: "Comunicate de presa",
         description: "Iasi",
-        link: "https://www.anaf.ro/IasiRSS/?canal=comunicate",
+        link: "/IasiRSS/?canal=comunicate",
         channelGroup: {
             name: "COMUNICATE_PRESA",
             description: "Comunicate de presa"
@@ -525,7 +537,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "COMUNICATE_PRESA_GALATI",
         title: "Comunicate de presa",
         description: "Galati",
-        link: "https://www.anaf.ro/GalatiRSS/?canal=comunicate",
+        link: "/GalatiRSS/?canal=comunicate",
         channelGroup: {
             name: "COMUNICATE_PRESA",
             description: "Comunicate de presa"
@@ -535,7 +547,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "COMUNICATE_PRESA_PLOIESTI",
         title: "Comunicate de presa",
         description: "Ploiesti",
-        link: "https://www.anaf.ro/PloiestiRSS/?canal=comunicate",
+        link: "/PloiestiRSS/?canal=comunicate",
         channelGroup: {
             name: "COMUNICATE_PRESA",
             description: "Comunicate de presa"
@@ -545,7 +557,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "COMUNICATE_PRESA_CRAIOVA",
         title: "Comunicate de presa",
         description: "Craiova",
-        link: "https://www.anaf.ro/CraiovaRSS/?canal=comunicate",
+        link: "/CraiovaRSS/?canal=comunicate",
         channelGroup: {
             name: "COMUNICATE_PRESA",
             description: "Comunicate de presa"
@@ -555,7 +567,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "COMUNICATE_PRESA_TIMISOARA",
         title: "Comunicate de presa",
         description: "Timisoara",
-        link: "https://www.anaf.ro/TimisoaraRSS/?canal=comunicate",
+        link: "/TimisoaraRSS/?canal=comunicate",
         channelGroup: {
             name: "COMUNICATE_PRESA",
             description: "Comunicate de presa"
@@ -565,7 +577,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "COMUNICATE_PRESA_CLUJ",
         title: "Comunicate de presa",
         description: "Cluj",
-        link: "https://www.anaf.ro/ClujRSS/?canal=comunicate",
+        link: "/ClujRSS/?canal=comunicate",
         channelGroup: {
             name: "COMUNICATE_PRESA",
             description: "Comunicate de presa"
@@ -575,7 +587,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "COMUNICATE_PRESA_BRASOV",
         title: "Comunicate de presa",
         description: "Brasov",
-        link: "https://www.anaf.ro/BrasovRSS/?canal=comunicate",
+        link: "/BrasovRSS/?canal=comunicate",
         channelGroup: {
             name: "COMUNICATE_PRESA",
             description: "Comunicate de presa"
@@ -585,7 +597,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "NOUTATI_LEGISLATIVE",
         title: "Noutati legislative",
         description: "Noutati legislative",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=legislatie",
+        link: "/ANAFRSS/?canal=legislatie",
         channelGroup: {
             name: "NOUTATI_LEGISLATIVE",
             description: "Noutati legislative"
@@ -595,7 +607,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_STAT_ANAF",
         title: "Valorificare bunuri din proprietatea privata a statutului",
         description: "Anaf",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=valorifbunPPS",
+        link: "/ANAFRSS/?canal=valorifbunPPS",
         channelGroup: {
             name: "BUNURI_STAT",
             description: "Valorificare bunuri din proprietatea privata a statutului"
@@ -605,7 +617,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_STAT_BUCURESTI",
         title: "Valorificare bunuri din proprietatea privata a statutului",
         description: "Bucuresti",
-        link: "https://www.anaf.ro/BucurestiRSS/?canal=valorifbunPPS",
+        link: "/BucurestiRSS/?canal=valorifbunPPS",
         channelGroup: {
             name: "BUNURI_STAT",
             description: "Valorificare bunuri din proprietatea privata a statutului"
@@ -615,7 +627,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_STAT_IASI",
         title: "Valorificare bunuri din proprietatea privata a statutului",
         description: "Iasi",
-        link: "https://www.anaf.ro/IasiRSS/?canal=valorifbunPPS",
+        link: "/IasiRSS/?canal=valorifbunPPS",
         channelGroup: {
             name: "BUNURI_STAT",
             description: "Valorificare bunuri din proprietatea privata a statutului"
@@ -625,7 +637,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_STAT_GALATI",
         title: "Valorificare bunuri din proprietatea privata a statutului",
         description: "Galati",
-        link: "https://www.anaf.ro/GalatiRSS/?canal=valorifbunPPS",
+        link: "/GalatiRSS/?canal=valorifbunPPS",
         channelGroup: {
             name: "BUNURI_STAT",
             description: "Valorificare bunuri din proprietatea privata a statutului"
@@ -635,7 +647,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_STAT_PLOIESTI",
         title: "Valorificare bunuri din proprietatea privata a statutului",
         description: "Ploiesti",
-        link: "https://www.anaf.ro/PloiestiRSS/?canal=valorifbunPPS",
+        link: "/PloiestiRSS/?canal=valorifbunPPS",
         channelGroup: {
             name: "BUNURI_STAT",
             description: "Valorificare bunuri din proprietatea privata a statutului"
@@ -645,7 +657,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_STAT_CRAIOVA",
         title: "Valorificare bunuri din proprietatea privata a statutului",
         description: "Craiova",
-        link: "https://www.anaf.ro/CraiovaRSS/?canal=valorifbunPPS",
+        link: "/CraiovaRSS/?canal=valorifbunPPS",
         channelGroup: {
             name: "BUNURI_STAT",
             description: "Valorificare bunuri din proprietatea privata a statutului"
@@ -655,7 +667,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_STAT_TIMISOARA",
         title: "Valorificare bunuri din proprietatea privata a statutului",
         description: "Timisoara",
-        link: "https://www.anaf.ro/TimisoaraRSS/?canal=valorifbunPPS",
+        link: "/TimisoaraRSS/?canal=valorifbunPPS",
         channelGroup: {
             name: "BUNURI_STAT",
             description: "Valorificare bunuri din proprietatea privata a statutului"
@@ -665,7 +677,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_STAT_CLUJ",
         title: "Valorificare bunuri din proprietatea privata a statutului",
         description: "Cluj",
-        link: "https://www.anaf.ro/ClujRSS/?canal=valorifbunPPS",
+        link: "/ClujRSS/?canal=valorifbunPPS",
         channelGroup: {
             name: "BUNURI_STAT",
             description: "Valorificare bunuri din proprietatea privata a statutului"
@@ -675,7 +687,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_STAT_BRASOV",
         title: "Valorificare bunuri din proprietatea privata a statutului",
         description: "Brasov",
-        link: "https://www.anaf.ro/BrasovRSS/?canal=valorifbunPPS",
+        link: "/BrasovRSS/?canal=valorifbunPPS",
         channelGroup: {
             name: "BUNURI_STAT",
             description: "Valorificare bunuri din proprietatea privata a statutului"
@@ -685,7 +697,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_ANAF",
         title: "Valorificare prin licitatie a bunurilor sechestrate",
         description: "Anaf",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=valoriflicitaBS",
+        link: "/ANAFRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE",
             description: "Valorificare prin licitatie a bunurilor sechestrate"
@@ -695,7 +707,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_BUCURESTI",
         title: "Valorificare prin licitatie a bunurilor sechestrate",
         description: "Bucuresti",
-        link: "https://www.anaf.ro/BucurestiRSS/?canal=valoriflicitaBS",
+        link: "/BucurestiRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE",
             description: "Valorificare prin licitatie a bunurilor sechestrate"
@@ -705,7 +717,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_IASI",
         title: "Valorificare prin licitatie a bunurilor sechestrate",
         description: "Iasi",
-        link: "https://www.anaf.ro/IasiRSS/?canal=valoriflicitaBS",
+        link: "/IasiRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE",
             description: "Valorificare prin licitatie a bunurilor sechestrate"
@@ -715,7 +727,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_GALATI",
         title: "Valorificare prin licitatie a bunurilor sechestrate",
         description: "Galati",
-        link: "https://www.anaf.ro/GalatiRSS/?canal=valoriflicitaBS",
+        link: "/GalatiRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE",
             description: "Valorificare prin licitatie a bunurilor sechestrate"
@@ -725,7 +737,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_PLOIESTI",
         title: "Valorificare prin licitatie a bunurilor sechestrate",
         description: "Ploiesti",
-        link: "https://www.anaf.ro/PloiestiRSS/?canal=valoriflicitaBS",
+        link: "/PloiestiRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE",
             description: "Valorificare prin licitatie a bunurilor sechestrate"
@@ -735,7 +747,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_CRAIOVA",
         title: "Valorificare prin licitatie a bunurilor sechestrate",
         description: "Craiova",
-        link: "https://www.anaf.ro/CraiovaRSS/?canal=valoriflicitaBS",
+        link: "/CraiovaRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE",
             description: "Valorificare prin licitatie a bunurilor sechestrate"
@@ -745,7 +757,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_TIMISOARA",
         title: "Valorificare prin licitatie a bunurilor sechestrate",
         description: "Timisoara",
-        link: "https://www.anaf.ro/TimisoaraRSS/?canal=valoriflicitaBS",
+        link: "/TimisoaraRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE",
             description: "Valorificare prin licitatie a bunurilor sechestrate"
@@ -755,7 +767,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_CLUJ",
         title: "Valorificare prin licitatie a bunurilor sechestrate",
         description: "Cluj",
-        link: "https://www.anaf.ro/ClujRSS/?canal=valoriflicitaBS",
+        link: "/ClujRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE",
             description: "Valorificare prin licitatie a bunurilor sechestrate"
@@ -765,7 +777,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_BRASOV",
         title: "Valorificare prin licitatie a bunurilor sechestrate",
         description: "Brasov",
-        link: "https://www.anaf.ro/BrasovRSS/?canal=valoriflicitaBS",
+        link: "/BrasovRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE",
             description: "Valorificare prin licitatie a bunurilor sechestrate"
@@ -775,7 +787,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_VANZARE_DIRECTA_ANAF",
         title: "Valorificare prin vanzare directa a bunurilor sechestrate",
         description: "Anaf",
-        link: "https://www.anaf.ro/ANAFRSS/?canal=valoriflicitaBS",
+        link: "/ANAFRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE_VANZARE_DIRECTA",
             description: "Valorificare prin vanzare directa a bunurilor sechestrate"
@@ -785,7 +797,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_VANZARE_DIRECTA_BUCURESTI",
         title: "Valorificare prin vanzare directa a bunurilor sechestrate",
         description: "Bucuresti",
-        link: "https://www.anaf.ro/BucurestiRSS/?canal=valoriflicitaBS",
+        link: "/BucurestiRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE_VANZARE_DIRECTA",
             description: "Valorificare prin vanzare directa a bunurilor sechestrate"
@@ -795,7 +807,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_VANZARE_DIRECTA_IASI",
         title: "Valorificare prin vanzare directa a bunurilor sechestrate",
         description: "Iasi",
-        link: "https://www.anaf.ro/IasiRSS/?canal=valoriflicitaBS",
+        link: "/IasiRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE_VANZARE_DIRECTA",
             description: "Valorificare prin vanzare directa a bunurilor sechestrate"
@@ -805,7 +817,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_VANZARE_DIRECTA_GALATI",
         title: "Valorificare prin vanzare directa a bunurilor sechestrate",
         description: "Galati",
-        link: "https://www.anaf.ro/GalatiRSS/?canal=valoriflicitaBS",
+        link: "/GalatiRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE_VANZARE_DIRECTA",
             description: "Valorificare prin vanzare directa a bunurilor sechestrate"
@@ -815,7 +827,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_VANZARE_DIRECTA_PLOIESTI",
         title: "Valorificare prin vanzare directa a bunurilor sechestrate",
         description: "Ploiesti",
-        link: "https://www.anaf.ro/PloiestiRSS/?canal=valoriflicitaBS",
+        link: "/PloiestiRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE_VANZARE_DIRECTA",
             description: "Valorificare prin vanzare directa a bunurilor sechestrate"
@@ -825,7 +837,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_VANZARE_DIRECTA_CRAIOVA",
         title: "Valorificare prin vanzare directa a bunurilor sechestrate",
         description: "Craiova",
-        link: "https://www.anaf.ro/CraiovaRSS/?canal=valoriflicitaBS",
+        link: "/CraiovaRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE_VANZARE_DIRECTA",
             description: "Valorificare prin vanzare directa a bunurilor sechestrate"
@@ -835,7 +847,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_VANZARE_DIRECTA_TIMISOARA",
         title: "Valorificare prin vanzare directa a bunurilor sechestrate",
         description: "Timisoara",
-        link: "https://www.anaf.ro/TimisoaraRSS/?canal=valoriflicitaBS",
+        link: "/TimisoaraRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE_VANZARE_DIRECTA",
             description: "Valorificare prin vanzare directa a bunurilor sechestrate"
@@ -845,7 +857,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_VANZARE_DIRECTA_CLUJ",
         title: "Valorificare prin vanzare directa a bunurilor sechestrate",
         description: "Cluj",
-        link: "https://www.anaf.ro/ClujRSS/?canal=valoriflicitaBS",
+        link: "/ClujRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE_VANZARE_DIRECTA",
             description: "Valorificare prin vanzare directa a bunurilor sechestrate"
@@ -855,7 +867,7 @@ export const RSS_CHANNEL_LIST: RssChannels = {
         tag: "BUNURI_SECHESTRATE_VANZARE_DIRECTA_BRASOV",
         title: "Valorificare prin vanzare directa a bunurilor sechestrate",
         description: "Brasov",
-        link: "https://www.anaf.ro/BrasovRSS/?canal=valoriflicitaBS",
+        link: "/BrasovRSS/?canal=valoriflicitaBS",
         channelGroup: {
             name: "BUNURI_SECHESTRATE_VANZARE_DIRECTA",
             description: "Valorificare prin vanzare directa a bunurilor sechestrate"

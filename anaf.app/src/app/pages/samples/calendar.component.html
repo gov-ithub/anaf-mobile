@@ -1,0 +1,34 @@
+﻿<ion-header>
+	<ion-navbar>
+		<ion-title>Calendar sample</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<button ion-button color="light">Light</button>
+	<button ion-button>Default</button>
+	<button ion-button color="secondary">Secondary</button>
+	<button ion-button color="danger">Danger</button>
+	<button ion-button color="dark">Dark</button>
+	<ion-item>
+		<ion-label>Arya Stark Disabled</ion-label>
+		<ion-checkbox disabled="true"></ion-checkbox>
+	</ion-item>
+	<ion-item>
+		<ion-label>Arya Stark</ion-label>
+		<ion-checkbox color="secondary"></ion-checkbox>
+	</ion-item>
+
+	<button ion-button color="secondary" clear icon-left small>
+		<ion-icon name="ic-detalii"></ion-icon>
+		Detalii
+	</button>
+	<button ion-button color="secondary" clear icon-left small>
+		<ion-icon name="ic-creion"></ion-icon>
+		Completeaza formular
+	</button>
+
+	<button ion-button color="secondary" full>Full</button>
+	<button ion-button (click)="create_notification()">Create notification</button>
+	<button ion-button (click)="show_notifications()">Show notifications</button>
+</ion-content>

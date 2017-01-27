@@ -16,6 +16,8 @@ Se doreste o aplicatie independenta care, pentru inceput, va furniza o serie de 
 
 ### General
 - Instaleaza ultima versiune de NodeJS & NPM https://nodejs.org/en/
+- Android SDK
+- JDK 1.8
 
 ### In directorul cu anaf.app
 - shell: 
@@ -35,6 +37,33 @@ ionic state restore
 npm run serve
 ```
 - acceseaza in browser adresa servita de ionic
+
+Alte comenzi utile:
+- `ionic emulate android`
+- `ionic serve -l`
+
+## Known issues
+`ionic platforms add android` 
+- http://stackoverflow.com/questions/36198165/failed-to-find-android-home-environment-variable
+- https://forum.ionicframework.com/t/error-requirements-check-failed-for-jdk-1-8-or-greater/68734 
+`install x86 emulator accelerator` 
+- http://stackoverflow.com/questions/41092207/the-intel-x86-emulator-accelerator-haxm-installer-revision-6-0-5-is-showing-no
+
+```
+Your emulator is out of date, please update by launching Android Studio:
+ - Open `SDK Manager`
+ - Click `SDK Tools` tab
+ - Check `Android SDK Tool`" checkbox
+ - Click `Install {x} packages`
+ - Accept `Terms and Conditions`
+```
+
+- dezactivare `bcdedit /set hypervisorlaunchtype off`
+- activare `bcdedit /set hypervisorlaunchtype auto`
+
+## Platforme
+- iOS (>= 8)
+- Android (SDK >= 7)
 
 
 ## Tehnologii folosite

@@ -42,6 +42,7 @@ $colors: (
   titlesDarkBg:   #fff,
   titlesLightBg:  #222,
   bodyText:       #222,
+  secondaryText:  #9d9d9d,
   // Common colors
 
   // Android colors
@@ -53,6 +54,12 @@ $colors: (
 
 $ionicons-font-path: "../assets/fonts";
 $ic-font-path: "../assets/fonts";
+
+/* ionic variables override */
+$text-color: map-get($colors, bodyText);
+$item-ios-paragraph-text-color: $text-color;
+$item-md-paragraph-text-color: $text-color;
+$list-md-header-color: $text-color;
 
 
 /*@import "app.core.scss";*/

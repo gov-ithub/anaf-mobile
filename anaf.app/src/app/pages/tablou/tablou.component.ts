@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { SampleCalendarPage } from './../samples/calendar.component';
+import { NotificationService } from './../../providers/notification.service';
+import { NotificationList } from './../../models';
 
 /*
   Generated class for the Tablou page.
@@ -11,12 +14,22 @@ import { NavController } from 'ionic-angular';
   selector: 'page-tablou',
   templateUrl: 'tablou.component.html'
 })
-export class TablouPage {
+export class TablouPage implements OnInit {
 
-  constructor(public navCtrl: NavController) {}
+  items: NotificationList
 
-  ionViewDidLoad() {
-    console.log('Hello TablouPage Page');
+  constructor(public navController: NavController, private notif: NotificationService) {}
+  ngOnInit() {
+    this.items = new NotificationList();
   }
 
+  ionViewWillEnter() {
+    this.notif.getList().then((list) => {
+      this.items = list;
+    });
+  }
+
+  sample_calendar() {
+    this.navController.push(SampleCalendarPage);
+  }
 }
